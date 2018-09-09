@@ -1,0 +1,11 @@
+# Save in ~/Music
+-o ~/Music/Main/%(title)s.%(ext)s
+
+# Ignore errors when downloading a playlist.
+-i
+
+# Audio quality (between 0 and 9, default is 5).
+--audio-quality 5
+
+# Keep only audio files.
+-x
