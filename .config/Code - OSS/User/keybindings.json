@@ -49,5 +49,13 @@
         "key": "ctrl+shift+tab",
         "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
         "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "alt+p",
+        "command": "python.execInTerminal"
+    },
+    {
+        "key": "alt+t",
+        "command": "workbench.action.terminal.focus"
     }
 ]
