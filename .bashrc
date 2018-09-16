@@ -15,6 +15,7 @@ alias disconnect-Q30='bluetoothctl disconnect 11:1F:00:01:D0:C3; bluetoothctl po
 alias music-update-main='youtube-dl -o "~/Music/Main/%(title)s.%(ext)s" --download-archive ~/Music/Main/archive.txt https://www.youtube.com/playlist?list=PLDM507H18AIPZgxkmsaPBSiopZ_vntjhM'
 alias weather='curl wttr.in/Granada'
 alias vim='nvim'
+alias ssh='TERM=xterm ssh'
 
 # Functions.
 xev-arch () {

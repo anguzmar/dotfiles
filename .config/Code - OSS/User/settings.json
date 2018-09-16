@@ -1,18 +1,11 @@
 {
-    "editor.fontFamily": "'Inconsolata', Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontSize": 18,
-    "editor.wordWrapColumn": 100,
+    "editor.fontFamily": "'Monaco','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 14,
+    "editor.wordWrapColumn": 120,
     "python.linting.flake8Enabled": true,
-    "python.linting.pep8Enabled": true,
     "python.formatting.autopep8Path": "autopep8 ",
     "workbench.colorTheme": "Solarized Dark",
-    "python.formatting.autopep8Args": [
-        "--max-line-length=120",
-    ],
     "python.linting.flake8Args": [
-        "--max-line-length=120"
-    ],
-    "python.linting.pep8Args":[
         "--max-line-length=120"
     ],
     "workbench.editor.showTabs": true,
@@ -26,5 +19,7 @@
           "before": ["<C-l>"],
           "after": ["<C-w>", "<C-l>"]
         }
-      ],
+    ],
+    "terminal.integrated.fontFamily": "Inconsolata",
+    "editor.rulers":[120],
 }

@@ -1,4 +1,4 @@
 rofi.modi: window,run,ssh,drun
 rofi.opacity: 90
-rofi.matching: fuzzy
 rofi.theme: /usr/share/rofi/themes/DarkBlue.rasi
+rofi.show-icons: true

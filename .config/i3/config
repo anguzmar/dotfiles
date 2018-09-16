@@ -98,7 +98,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
 set $ws2 "2:"
-set $ws3 "3"
+set $ws3 "3:"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -193,6 +193,7 @@ exec_always --no-startup-id feh --bg-scale ~/Pictures/glados.jpg
 # Custom keybinds.
 bindsym $mod+Shift+x exec i3lock -e -i ~/Pictures/lambda.png
 bindsym $mod+o exec --no-startup-id opera
+bindsym $mod+c exec --no-startup-id code; workspace $ws3
 bindsym $mod+t exec --no-startup-id thunderbird; workspace $ws9
 bindsym Print exec --no-startup-id maim ~/Pictures/screenshot.png
 bindsym $mod+Print exec --no-startup-id maim -s ~/Pictures/screenshot.png
@@ -203,6 +204,7 @@ bindsym $mod+i exec --no-startup-id $TERM -e ranger
 # Assign workspaces.
 assign [class="Thunderbird"] $ws9
 assign [class="Telegram"] $ws8
+assign [class="code"] $ws3
 
 # Execute stuff.
 exec --no-startup-id compton
