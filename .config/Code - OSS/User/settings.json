@@ -2,7 +2,6 @@
     "editor.fontFamily": "'Monaco','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 14,
     "editor.wordWrapColumn": 120,
-    "python.linting.flake8Enabled": true,
     "python.formatting.autopep8Path": "autopep8 ",
     "workbench.colorTheme": "Solarized Dark",
     "python.linting.flake8Args": [
@@ -25,4 +24,6 @@
         120
     ],
     "git.autofetch": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
 }
