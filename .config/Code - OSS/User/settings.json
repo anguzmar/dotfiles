@@ -21,5 +21,8 @@
         }
     ],
     "terminal.integrated.fontFamily": "Inconsolata",
-    "editor.rulers":[120],
+    "editor.rulers": [
+        120
+    ],
+    "git.autofetch": true,
 }
