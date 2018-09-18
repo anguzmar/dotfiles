@@ -9,3 +9,6 @@
 
 # Keep only audio files.
 -x
+
+# Audio format.
+--audio-format "mp3"

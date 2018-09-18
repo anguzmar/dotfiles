@@ -36,6 +36,7 @@ set showcmd
 set number
 set relativenumber
 set encoding=UTF-8
+set backupdir=~/TMP
 
 " Color scheme.
 color evening
