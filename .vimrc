@@ -13,7 +13,6 @@ Plug 'nvie/vim-flake8'
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
-Plug 'neomake/neomake'
 endif
 
 call plug#end()
@@ -42,11 +41,6 @@ set backupdir=~/TMP
 color evening
 hi Normal ctermbg=None
 hi Folded ctermbg=60 ctermfg=2
-
-" Neomake settings.
-if has ('nvim')
-call neomake#configure#automake('w')
-endif
 
 " Deoplete settings.
 let g:deoplete#enable_at_startup = 1

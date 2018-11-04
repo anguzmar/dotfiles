@@ -16,27 +16,17 @@ alias music-update-main='youtube-dl -o "~/Music/Main/%(title)s.%(ext)s" --downlo
 alias weather='curl wttr.in/Granada'
 alias vim='nvim'
 alias ssh='TERM=xterm ssh'
+alias enable-touchpad='xinput enable "SynPS/2 Synaptics TouchPad"'
+alias disable-touchpad='xinput disable "SynPS/2 Synaptics TouchPad"'
 
 # Functions.
 xev-arch () {
 	xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 }
 
-terminal-colors(){
-	for x in {0..8}; do 
-	    for i in {30..37}; do 
-		for a in {40..47}; do 
-		    echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "
-		done
-		echo
-	    done
-	done
-	echo ""
+packages () {
+	pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h
 }
-
-# Export ENV variables.
-export LC_TIME="en_GB.UTF-8"
-export LC_PAPER="en_GB.UTF-8"
 
 # TMUX stuff.
 #[[ $- != *i* ]] && return # If not running interactively, do not do anything.
