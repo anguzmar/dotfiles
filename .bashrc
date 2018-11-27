@@ -18,6 +18,7 @@ alias vim='nvim'
 alias ssh='TERM=xterm ssh'
 alias enable-touchpad='xinput enable "SynPS/2 Synaptics TouchPad"'
 alias disable-touchpad='xinput disable "SynPS/2 Synaptics TouchPad"'
+alias mininet='ssh -X mininet@192.168.56.101'
 
 # Functions.
 xev-arch () {
