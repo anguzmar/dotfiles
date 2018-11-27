@@ -9,7 +9,6 @@ PS1='[\u@\h \W]\$ '
 
 # Custom alias.
 alias suspend='systemctl suspend'
-alias cv='vim ~/Documents/cv/cv.tex'
 alias Q30='bluetoothctl power on; bluetoothctl connect 11:1F:00:01:D0:C3'
 alias disconnect-Q30='bluetoothctl disconnect 11:1F:00:01:D0:C3; bluetoothctl power off'
 alias music-update-main='youtube-dl -o "~/Music/Main/%(title)s.%(ext)s" --download-archive ~/Music/Main/archive.txt https://www.youtube.com/playlist?list=PLDM507H18AIPZgxkmsaPBSiopZ_vntjhM'
