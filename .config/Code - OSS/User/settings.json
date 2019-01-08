@@ -2,8 +2,9 @@
     "editor.fontFamily": "'Monaco','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 14,
     "editor.wordWrapColumn": 120,
+    "editor.lineNumbers": "relative",
     "python.formatting.autopep8Path": "autopep8 ",
-    "workbench.colorTheme": "Solarized Dark",
+    "workbench.colorTheme": "Monokai Dimmed",
     "python.linting.flake8Args": [
         "--max-line-length=120"
     ],
@@ -11,13 +12,14 @@
     "workbench.startupEditor": "newUntitledFile",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-          "before": ["<C-h>"],
-          "after": ["<C-w>", "<C-h>"]
+            "before": ["<leader>", "d"],
+            "commands": ["editor.action.peekDefinition"]
         },
         {
-          "before": ["<C-l>"],
-          "after": ["<C-w>", "<C-l>"]
-        }
+            "before": ["<C-d>"],
+            "after": ["<C-f>"],
+        },
+
     ],
     "terminal.integrated.fontFamily": "Inconsolata",
     "editor.rulers": [
@@ -26,4 +28,10 @@
     "git.autofetch": true,
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
+    "vim.leader": ",",
+    "vim.handleKeys":{
+        "<C-d>": true,
+        "<C-w>": false,
+    },
+    "vim.textwidth": 120,
 }

@@ -23,6 +23,8 @@ nnoremap <Leader>q :bp<ENTER>
 nnoremap <Leader>w :bn<ENTER>
 nnoremap <Leader>p "0p
 nnoremap <C-n> :NERDTreeToggle<ENTER>
+nnoremap <Leader>h :%!xxd<ENTER>
+nnoremap <Leader>H :%!xxd -r<ENTER>
 
 if has('nvim')
 tnoremap <Esc> <C-\><C-n>
