@@ -16,6 +16,10 @@
             "commands": ["editor.action.peekDefinition"]
         },
         {
+            "before": ["<leader>", "b"],
+            "commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"]
+        },
+        {
             "before": ["<C-d>"],
             "after": ["<C-f>"],
         },
@@ -28,10 +32,14 @@
     "git.autofetch": true,
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
+    "python.unitTest.unittestEnabled": true,
+    "python.unitTest.pyTestEnabled": false,
+    "python.unitTest.nosetestsEnabled": false,
     "vim.leader": ",",
     "vim.handleKeys":{
         "<C-d>": true,
         "<C-w>": false,
+        "<C-k>": false,
     },
     "vim.textwidth": 120,
 }

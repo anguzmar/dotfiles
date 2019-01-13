@@ -188,15 +188,16 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Display background.
-exec_always --no-startup-id feh --bg-scale ~/Pictures/glados.jpg
+exec_always --no-startup-id feh --bg-scale ~/Media/Pictures/glados.jpg
 
 # Custom keybinds.
-bindsym $mod+Shift+x exec i3lock -e -i ~/Pictures/lambda.png
+bindsym $mod+Shift+x exec i3lock -e -i ~/Media/Pictures/lambda.png
 bindsym $mod+o exec --no-startup-id opera
 bindsym $mod+c exec --no-startup-id code; workspace $ws3
 bindsym $mod+t exec --no-startup-id thunderbird; workspace $ws9
-bindsym Print exec --no-startup-id maim ~/Pictures/screenshot.png
-bindsym $mod+Print exec --no-startup-id maim -s ~/Pictures/screenshot.png
+bindsym Print exec --no-startup-id maim ~/Media/Pictures/screenshot.png
+#bindsym $mod+Print exec --no-startup-id maim -s ~/Media/Pictures/screenshot.png && feh ~/Media/Pictures/screenshot.png
+bindsym $mod+Print exec --no-startup-id sh ~/Coding/Bash/screenshot.sh 
 bindsym $mod+Shift+S exec --no-startup-id systemctl suspend
 bindsym $mod+p exec $TERM -e python
 bindsym $mod+i exec --no-startup-id $TERM -e ranger

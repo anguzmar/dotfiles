@@ -23,8 +23,13 @@ nnoremap <Leader>q :bp<ENTER>
 nnoremap <Leader>w :bn<ENTER>
 nnoremap <Leader>p "0p
 nnoremap <C-n> :NERDTreeToggle<ENTER>
-nnoremap <Leader>h :%!xxd<ENTER>
+
+" Hex editing.
+nnoremap <Leader>h :%!xxd<ENTER>  
 nnoremap <Leader>H :%!xxd -r<ENTER>
+
+" Remove trailing white spaces.
+nnoremap <Leader>t :%s/\s\+$//e <BAR> :w<ENTER>
 
 if has('nvim')
 tnoremap <Esc> <C-\><C-n>
@@ -37,7 +42,10 @@ set showcmd
 set number
 set relativenumber
 set encoding=UTF-8
-set backupdir=~/TMP
+set backupdir=~/.TMP
+set background=dark
+setlocal shiftwidth=4
+setlocal tabstop=4
 
 " Color scheme.
 color evening

@@ -178,5 +178,9 @@
     {
         "key": "ctrl+shift+[Comma]",
         "command": "workbench.action.openSettingsJson"
+    },
+    {
+        "key": "ctrl+n ctrl+f",
+        "command": "explorer.newFile"
     }
 ]
