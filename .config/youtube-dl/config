@@ -1,5 +1,5 @@
 # Save in ~/Music
--o ~/Music/Main/%(title)s.%(ext)s
+-o ~/Media/Music/Main/%(title)s.%(ext)s
 
 # Ignore errors when downloading a playlist.
 -i
@@ -8,7 +8,7 @@
 --audio-quality 5
 
 # Keep only audio files.
--x
+-f bestaudio
 
 # Audio format.
 --audio-format "mp3"

@@ -4,7 +4,7 @@
     "editor.wordWrapColumn": 120,
     "editor.lineNumbers": "relative",
     "python.formatting.autopep8Path": "autopep8 ",
-    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.colorTheme": "Night Owl",
     "python.linting.flake8Args": [
         "--max-line-length=120"
     ],

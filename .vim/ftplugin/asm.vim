@@ -8,6 +8,6 @@ augroup filetype
 augroup END
 
 " Compile stuff automatically.
-nnoremap <Leader>c :!nasm -f elf32 % -o %:r.o && ld -m elf_i386 %:r.o -o %:r<ENTER>
+nnoremap <Leader>c :!nasm -g -f elf32 % -o %:r.o && ld -m elf_i386 %:r.o -o %:r<ENTER>
 nnoremap <Leader>e :!./%:r<ENTER>
 
