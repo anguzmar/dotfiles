@@ -1,5 +1,5 @@
-ida-free 7.0-3
-polybar 3.3.0-1
-siji-git r22.9d88311-1
-ttf-monaco 6.1-3
-yay 9.0.1-3
+ida-free
+polybar
+siji-git
+ttf-monaco
+yay
