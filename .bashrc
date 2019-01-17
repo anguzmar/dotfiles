@@ -18,7 +18,7 @@ alias ssh='TERM=xterm ssh'
 alias enable-touchpad='xinput enable "SynPS/2 Synaptics TouchPad"'
 alias disable-touchpad='xinput disable "SynPS/2 Synaptics TouchPad"'
 alias mininet='ssh -X mininet@192.168.1.39'
-alias update_lists_packages='pacman -Q > ~/.Packages_Installed.txt && pacman -Qm > ~/.AUR_Packages_Installed.txt'
+alias update_lists_packages='pacman -Qe > ~/.Packages_Installed.txt && pacman -Qm > ~/.AUR_Packages_Installed.txt'
 
 # Functions.
 xev-arch () {
