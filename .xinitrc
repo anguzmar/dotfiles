@@ -11,6 +11,7 @@ export SSH_AUTH_SOCK
 # Disable touchpad.
 xinput disable "SynPS/2 Synaptics TouchPad"
 
-#export XDG_CURRENT_DESKTOP=Budgie:GNOME
-#exec budgie-desktop
+# Activate Numlock on Bootup
+numlockx &
+
 exec i3
