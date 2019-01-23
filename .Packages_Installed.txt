@@ -51,6 +51,11 @@ grilo-plugins
 gst-plugins-base
 gst-plugins-good
 gvfs
+gvfs-afc
+gvfs-goa
+gvfs-mtp
+gvfs-nfs
+gvfs-smb
 gvim
 gzip
 htop
