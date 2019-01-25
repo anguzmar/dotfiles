@@ -91,6 +91,7 @@ man-pages
 mdadm
 mpc
 mpd
+mpv
 nasm
 nautilus
 neofetch
@@ -167,7 +168,6 @@ usbutils
 util-linux
 vi
 virtualbox
-vlc
 w3m
 which
 wmctrl
