@@ -7,6 +7,9 @@
 alias ls='ls --color=auto --hide __pycache__'
 PS1='[\u@\h \W]\$ '
 
+# Enable forward-search (when using Ctrl-R) with Ctrl-S:
+stty -ixon
+
 # Custom alias.
 alias suspend='systemctl suspend'
 alias Q30='bluetoothctl power on; bluetoothctl connect 11:1F:00:01:D0:C3'
