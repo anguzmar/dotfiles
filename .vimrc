@@ -25,14 +25,15 @@ nnoremap <Leader>p "0p
 nnoremap <C-n> :NERDTreeToggle<ENTER>
 
 " Hex editing.
-nnoremap <Leader>h :%!xxd<ENTER>  
+nnoremap <Leader>h :%!xxd<ENTER>
 nnoremap <Leader>H :%!xxd -r<ENTER>
 
 " Remove trailing white spaces.
-nnoremap <Leader>t :%s/\s\+$//e <BAR> :w<ENTER>
+nnoremap <Leader>tr :%s/\s\+$//e <BAR> :w<ENTER>
 
 if has('nvim')
 tnoremap <Esc> <C-\><C-n>
+nnoremap <Leader>te :terminal<ENTER>
 endif
 
 " Useful stuff.
