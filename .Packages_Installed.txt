@@ -26,6 +26,7 @@ diffutils
 dmenu
 dunst
 e2fsprogs
+expect
 fail2ban
 fakeroot
 feh
@@ -106,7 +107,6 @@ noto-fonts
 noto-fonts-emoji
 numix-gtk-theme
 numlockx
-opera
 opera-ffmpeg-codecs
 otf-font-awesome
 p7zip
