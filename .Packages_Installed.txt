@@ -4,6 +4,7 @@ alsa-utils
 arandr
 arc-icon-theme
 ascii
+audacity
 autoconf
 automake
 bash
@@ -45,6 +46,7 @@ ghostscript
 git
 glibc
 gnome-keyring
+gnumeric
 gobject-introspection
 gopass
 grep
@@ -59,6 +61,7 @@ gvfs-nfs
 gvfs-smb
 gvim
 gzip
+hexchat
 htop
 httpie
 i3-gaps
@@ -107,6 +110,7 @@ noto-fonts
 noto-fonts-emoji
 numix-gtk-theme
 numlockx
+octave
 opera-ffmpeg-codecs
 otf-font-awesome
 p7zip
@@ -170,6 +174,7 @@ vi
 virtualbox
 w3m
 which
+wireshark-qt
 wmctrl
 wpa_supplicant
 xclip

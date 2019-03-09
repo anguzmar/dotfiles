@@ -1,4 +1,3 @@
-#
 # ~/.bashrc
 
 # If not running interactively, don't do anything
@@ -20,8 +19,10 @@ alias vim='nvim'
 alias ssh='TERM=xterm ssh'
 alias enable-touchpad='xinput enable "SynPS/2 Synaptics TouchPad"'
 alias disable-touchpad='xinput disable "SynPS/2 Synaptics TouchPad"'
-alias mininet='ssh -X mininet@192.168.1.39'
+alias mininet='ssh -X mininet@192.168.1.43'
 alias update_lists_packages='pacman -Qqen > ~/.Packages_Installed.txt && pacman -Qqm > ~/.AUR_Packages_Installed.txt'
+alias tfm='cd ~/Documents/School/TFM/'
+alias resolution='gnumeric ~/Documents/RandomStuff/Resolution.gnumeric &'
 
 # Functions.
 xev-arch () {

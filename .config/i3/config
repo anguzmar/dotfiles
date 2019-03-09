@@ -103,9 +103,9 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8:"
-set $ws9 "9:"
-set $ws10 "10:Calcurse"
+set $ws8 "8:"
+set $ws9 "9:"
+set $ws10 "10:"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -194,7 +194,7 @@ exec_always --no-startup-id feh --bg-scale ~/Media/Pictures/glados.jpg
 bindsym $mod+Shift+x exec i3lock -e -i ~/Media/Pictures/lambda.png
 bindsym $mod+o exec --no-startup-id firefox
 bindsym $mod+c exec --no-startup-id code; workspace $ws3
-bindsym $mod+t exec --no-startup-id thunderbird; workspace $ws9
+bindsym $mod+t exec --no-startup-id thunderbird; workspace $ws8
 bindsym Print exec --no-startup-id maim ~/Media/Pictures/screenshot.png
 #bindsym $mod+Print exec --no-startup-id maim -s ~/Media/Pictures/screenshot.png && feh ~/Media/Pictures/screenshot.png
 bindsym $mod+Print exec --no-startup-id sh ~/Coding/Bash/screenshot.sh 
@@ -203,8 +203,8 @@ bindsym $mod+p exec $TERM -e python
 bindsym $mod+n exec --no-startup-id $TERM -e nnn
 
 # Assign workspaces.
-assign [class="Thunderbird"] $ws9
-assign [class="Telegram"] $ws8
+assign [class="Thunderbird"] $ws8
+assign [class="Telegram"] $ws9
 assign [class="code"] $ws3
 
 # Execute stuff.

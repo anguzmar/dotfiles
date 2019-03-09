@@ -42,4 +42,5 @@
         "<C-k>": false,
     },
     "vim.textwidth": 120,
+    "sync.gist": "014ff4f98b11de2ba52fc67bbc3abcbd",
 }
