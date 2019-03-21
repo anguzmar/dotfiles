@@ -21,6 +21,7 @@ compton
 coreutils
 cryptsetup
 device-mapper
+dhcp
 dhcpcd
 dialog
 diffutils
@@ -38,6 +39,7 @@ findutils
 firefox
 flashplugin
 flex
+foremost
 gawk
 gcc
 gcc-libs
@@ -61,6 +63,7 @@ gvfs-nfs
 gvfs-smb
 gvim
 gzip
+hashcat
 hexchat
 htop
 httpie
@@ -78,6 +81,7 @@ iw
 jfsutils
 john
 less
+lib32-gcc-libs
 libcaca
 libtool
 libva-intel-driver
@@ -119,6 +123,7 @@ patch
 pciutils
 pepper-flash
 perl
+perl-image-exiftool
 pkgconf
 powerline-fonts
 procps-ng
@@ -131,6 +136,7 @@ python-pip
 reflector
 reiserfsprogs
 rofi
+ruby
 s-nail
 sed
 shadow
@@ -173,6 +179,7 @@ util-linux
 vi
 virtualbox
 w3m
+wget
 which
 wireshark-qt
 wmctrl
