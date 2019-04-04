@@ -28,6 +28,7 @@ alias scan='nmap -sn 192.168.1.0/24'
 alias size='du -sh .[!.]* * | sort -h'
 alias ethernet='sudo systemctl start dhcpcd@eno1.service'
 alias ethernet-dhcp='sudo systemctl start dhcpd4@eno1.service'
+alias gpg-show='gpg --list-secret-keys --keyid-format LONG'
 
 # Functions.
 xev-arch () {
