@@ -19,13 +19,15 @@ alias vim='nvim'
 alias ssh='TERM=xterm ssh'
 alias enable-touchpad='xinput enable "SynPS/2 Synaptics TouchPad"'
 alias disable-touchpad='xinput disable "SynPS/2 Synaptics TouchPad"'
-alias mininet='ssh -X mininet@192.168.56.103'
+alias mininet='ssh -X mininet@192.168.1.46'
 alias update_lists_packages='pacman -Qqen > ~/.Packages_Installed.txt && pacman -Qqm > ~/.AUR_Packages_Installed.txt'
 alias tfm='cd ~/Documents/School/TFM/'
 alias resolution='gnumeric ~/Documents/RandomStuff/Resolution.gnumeric &'
 alias xclipC='xclip -selection clipboard'
 alias scan='nmap -sn 192.168.1.0/24'
 alias size='du -sh .[!.]* * | sort -h'
+alias ethernet='sudo systemctl start dhcpcd@eno1.service'
+alias ethernet-dhcp='sudo systemctl start dhcpd4@eno1.service'
 
 # Functions.
 xev-arch () {
@@ -36,16 +38,3 @@ packages () {
 	pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h
 }
 
-# TMUX stuff.
-#[[ $- != *i* ]] && return # If not running interactively, do not do anything.
-#[[ -z "$TMUX" ]] && exec tmux
-
-#if which tmux >/dev/null 2>&1; then
-    # If no session is started, start a new session.
-#	test -z ${TMUX} && tmux
-
-    # When quitting tmux, try to attach.
-#	while test -z ${TMUX}; do
-#		tmux attach || break
-#	done
-#fi

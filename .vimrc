@@ -38,8 +38,8 @@ endif
 
 " Useful stuff.
 syntax enable
-set showmode
-set showcmd
+"set showmode
+"set showcmd
 set number
 set relativenumber
 set encoding=UTF-8
