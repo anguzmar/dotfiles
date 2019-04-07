@@ -37,6 +37,7 @@ file
 filesystem
 findutils
 firefox
+flameshot
 flashplugin
 flex
 foremost
@@ -45,6 +46,7 @@ gcc
 gcc-libs
 gdb
 ghostscript
+gimp
 git
 glibc
 gnome-keyring
