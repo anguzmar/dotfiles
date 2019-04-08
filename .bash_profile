@@ -12,7 +12,7 @@ fi
 PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
 # Silent startx.
-[[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx -- vt1 &> /dev/null
+#[[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx -- vt1 &> /dev/null
 
 # Export ENV variables.
 export LC_TIME="en_GB.UTF-8"
