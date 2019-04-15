@@ -23,6 +23,7 @@ cryptsetup
 device-mapper
 dhcp
 dhcpcd
+dia
 dialog
 diffutils
 dmenu
@@ -170,6 +171,7 @@ thunderbird
 tlp
 tracker
 tracker-miners
+tree
 ttf-arphic-uming
 ttf-baekmuk
 ttf-font-awesome
