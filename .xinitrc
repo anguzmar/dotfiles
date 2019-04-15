@@ -14,5 +14,4 @@ xinput disable "SynPS/2 Synaptics TouchPad"
 # Activate Numlock on Bootup
 numlockx &
 
-# dbus-launch is necessary for Flameshot.
 exec i3
