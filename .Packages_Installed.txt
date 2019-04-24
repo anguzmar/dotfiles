@@ -136,6 +136,7 @@ pulseaudio-bluetooth
 python-dbus
 python-gobject
 python-pip
+redshift
 reflector
 reiserfsprogs
 rofi
@@ -177,6 +178,7 @@ ttf-baekmuk
 ttf-font-awesome
 ttf-freefont
 ttf-inconsolata
+unclutter
 unzip
 usbutils
 util-linux
@@ -202,6 +204,7 @@ xorg-xfd
 xorg-xinit
 xorg-xinput
 xorg-xprop
+xss-lock
 xterm
 youtube-dl
 zathura
