@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Merging .Xresources
+# Merg .Xresources
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
 # Keyring stuff.
@@ -13,5 +13,9 @@ xinput disable "SynPS/2 Synaptics TouchPad"
 
 # Activate Numlock on Bootup
 numlockx &
+
+# Launch applications on startup.
+unclutter &
+xss-lock --ignore-sleep -- i3lock -e -n -i /home/angel/Media/Pictures/lambda.png &
 
 exec i3
