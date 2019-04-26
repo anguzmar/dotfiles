@@ -16,6 +16,7 @@ numlockx &
 
 # Launch applications on startup.
 unclutter &
+redshift &
 xss-lock -- i3lock -e -n -i /home/angel/Media/Pictures/lambda.png &
 
 exec i3
