@@ -16,6 +16,6 @@ numlockx &
 
 # Launch applications on startup.
 unclutter &
-xss-lock --ignore-sleep -- i3lock -e -n -i /home/angel/Media/Pictures/lambda.png &
+xss-lock -- i3lock -e -n -i /home/angel/Media/Pictures/lambda.png &
 
 exec i3
