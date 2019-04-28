@@ -29,6 +29,7 @@ alias size='du -sh .[!.]* * | sort -h'
 alias ethernet='sudo systemctl start dhcpcd@eno1.service'
 alias ethernet-dhcp='sudo systemctl start dhcpd4@eno1.service'
 alias gpg-show='gpg --list-secret-keys --keyid-format LONG'
+alias tree='tree -C'
 
 # Functions.
 xev-arch () {
