@@ -3,7 +3,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto --hide __pycache__'
+alias ls='ls --color=auto'
 alias diff='diff --color=auto'
 PS1='[\u@\h \W]\$ '
 
@@ -18,9 +18,9 @@ alias music-update-main='youtube-dl -o "~/Media/Music/Main/%(title)s.%(ext)s" --
 alias weather='curl -s wttr.in | head -n -1'
 alias vim='nvim'
 alias ssh='TERM=xterm ssh'
-alias enable-touchpad='xinput enable "SynPS/2 Synaptics TouchPad" && xinput set-prop "SynPS/2 Synaptics TouchPad" 306 1'
+alias enable-touchpad='xinput enable "SynPS/2 Synaptics TouchPad" && xinput set-prop "SynPS/2 Synaptics TouchPad" 308 1'
 alias disable-touchpad='xinput disable "SynPS/2 Synaptics TouchPad"'
-alias mininet='ssh -Y mininet@192.168.1.37'
+alias mininet='ssh -Y mininet@192.168.1.40'
 alias update_lists_packages='pacman -Qqen > ~/.Packages_Installed.txt && pacman -Qqm > ~/.AUR_Packages_Installed.txt'
 alias tfm='cd ~/Documents/School/TFM/'
 alias xclipC='xclip -selection clipboard'

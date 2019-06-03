@@ -169,6 +169,7 @@ texlive-pictures
 texlive-pstricks
 texlive-science
 thunderbird
+tk
 tlp
 tracker
 tracker-miners
@@ -197,6 +198,8 @@ xf86-video-intel
 xfsprogs
 xorg-font-util
 xorg-fonts-encodings
+xorg-fonts-misc
+xorg-fonts-type1
 xorg-server
 xorg-xbacklight
 xorg-xev
