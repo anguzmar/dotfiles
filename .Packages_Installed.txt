@@ -16,6 +16,7 @@ bluez-utils
 bzip2
 calcurse
 cmake
+cmatrix
 code
 compton
 coreutils
@@ -107,6 +108,7 @@ nasm
 nautilus
 neofetch
 neovim
+net-tools
 netctl
 network-manager-applet
 networkmanager
@@ -118,7 +120,6 @@ noto-fonts-emoji
 numix-gtk-theme
 numlockx
 octave
-opera-ffmpeg-codecs
 otf-font-awesome
 p7zip
 pacman
