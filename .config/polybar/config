@@ -378,7 +378,7 @@ animation-discharging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 6
+thermal-zone = 7
 warn-temperature = 70
 interval = 5
 

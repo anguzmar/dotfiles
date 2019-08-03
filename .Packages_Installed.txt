@@ -52,6 +52,7 @@ gimp
 git
 glibc
 gnome-keyring
+gnu-free-fonts
 gnumeric
 gobject-introspection
 gopass
@@ -125,6 +126,7 @@ p7zip
 pacman
 patch
 pciutils
+peek
 pepper-flash
 perl
 perl-image-exiftool
@@ -178,7 +180,6 @@ tree
 ttf-arphic-uming
 ttf-baekmuk
 ttf-font-awesome
-ttf-freefont
 ttf-inconsolata
 unclutter
 unzip

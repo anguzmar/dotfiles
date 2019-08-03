@@ -3,7 +3,6 @@
     "editor.fontSize": 14,
     "editor.wordWrapColumn": 120,
     "editor.lineNumbers": "relative",
-    "python.formatting.autopep8Path": "autopep8 ",
     "workbench.colorTheme": "Night Owl",
     "python.linting.flake8Args": [
         "--max-line-length=120"
@@ -19,11 +18,6 @@
             "before": ["<leader>", "b"],
             "commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"]
         },
-        {
-            "before": ["<C-d>"],
-            "after": ["<C-f>"],
-        },
-
     ],
     "terminal.integrated.fontFamily": "Inconsolata",
     "editor.rulers": [
@@ -32,9 +26,6 @@
     "git.autofetch": true,
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
-    "python.unitTest.unittestEnabled": false,
-    "python.unitTest.pyTestEnabled": false,
-    "python.unitTest.nosetestsEnabled": false,
     "vim.leader": ",",
     "vim.handleKeys":{
         "<C-d>": true,
