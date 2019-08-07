@@ -4,11 +4,5 @@
 # Ignore errors when downloading a playlist.
 -i
 
-# Audio quality (between 0 and 9, default is 5).
---audio-quality 5
-
-# Keep only audio files.
+# Keep only audio
 -f bestaudio
-
-# Audio format.
---audio-format "mp3"
