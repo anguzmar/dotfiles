@@ -41,3 +41,7 @@ xev-arch () {
 packages () {
 	pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h
 }
+
+stream_to_mpv () {
+	youtube-dl --playlist-random --ignore-config -f bestaudio -q -o - "$1" | mpv -
+}
