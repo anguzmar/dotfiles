@@ -91,7 +91,7 @@ let g:vimtex_enable='0'
 set langmap='[,¡],+=,º`
 
 " Format options.
-set textwidth=100
+set textwidth=120
 au FileType * set fo-=o fo+=j
 
 " Performance.
