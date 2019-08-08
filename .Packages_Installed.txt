@@ -118,7 +118,6 @@ nmap
 nnn
 noto-fonts
 noto-fonts-emoji
-numix-gtk-theme
 numlockx
 octave
 otf-font-awesome
@@ -215,3 +214,6 @@ youtube-dl
 zathura
 zathura-pdf-mupdf
 zip
+zsh
+zsh-completions
+zsh-syntax-highlighting
