@@ -25,7 +25,7 @@ alias mirrors_update='sudo /usr/bin/reflector --protocol https --latest 15 --sor
 alias cv-update='mv ~/downloads/CV.pdf ~/documents/cv/CV.pdf && zathura ~/documents/cv/CV.pdf'
 
 # Important aliases
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles_git='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Functions.
 xev-arch () {
