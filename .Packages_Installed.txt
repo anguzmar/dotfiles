@@ -28,6 +28,7 @@ dia
 dialog
 diffutils
 dmenu
+docker
 dunst
 e2fsprogs
 expect
