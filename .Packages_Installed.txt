@@ -123,6 +123,7 @@ octave
 otf-font-awesome
 p7zip
 pacman
+pacman-contrib
 patch
 pciutils
 peek
