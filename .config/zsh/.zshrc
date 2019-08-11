@@ -1,3 +1,4 @@
+####################
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.config/zsh/histfile
 HISTSIZE=1000
@@ -11,17 +12,25 @@ zstyle :compinstall filename '/home/angel/.config/zsh/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+####################
 
-# Add custom theme's directory (IMPORTANT: ADD TO PATH BEFORE LOADING PROMPTINIT)
+
+####### THEME RELATED STUFF #######
+# Add custom theme's directory
 fpath=("$ZDOTDIR/.zprompts" $fpath)
 
 # Enable prompt theme system
 autoload -Uz promptinit
 promptinit
 
+## SOURCE CONTROL RELATED STUFF ##
+autoload -Uz vcs_info
+setopt prompt_subst
 
 # Select theme
-prompt redhat
+prompt aphrodite
+####################
+
 
 # Fish-like syntax highlight
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -31,6 +40,8 @@ zstyle ':completion:*' rehash true
 
 # Enable Ctrl+R history search (disabled at first because of vi keybinds)
 bindkey "^R" history-incremental-search-backward
+
+# Enable some useful commands in insert mode
 bindkey "^E" end-of-line
 bindkey "^A" beginning-of-line
 
