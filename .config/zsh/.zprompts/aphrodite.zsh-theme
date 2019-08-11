@@ -29,9 +29,8 @@ aphrodite_get_prompt() {
 }
 
 
-zstyle ':vcs_info:*' actionformats '%B%F{196}|%f%%b \uf126 %B%F{57}‹%b›%f%%b '
-zstyle ':vcs_info:*' formats '%B%F{196}|%f%%b \uf126 %B%F{46}%u%c%b%c%f%%b '
-zstyle ':vcs_info:*' branchformat '%B%F{196}|%f%%%b \uf126 %B%F{46}%b%f:%F{3}%r%f%%%b '
+zstyle ':vcs_info:*' actionformats '%B%F{196}|%f%%b \uf126 %B%F{57}%u%b%c%f%%b '
+zstyle ':vcs_info:*' formats '%B%F{196}|%f%%b \uf126 %B%F{46}%u%b%c%f%%b '
 
 # Check for staged and unstaged files
 zstyle ':vcs_info:*' check-for-changes true
