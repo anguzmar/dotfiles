@@ -26,7 +26,7 @@ alias cv-update='mv ~/downloads/CV.pdf ~/documents/cv/CV.pdf && zathura ~/docume
 alias orphans_remove='sudo pacman -Rns $(pacman -Qtdq)'
 
 # Important aliases
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Functions.
 xev-arch () {
