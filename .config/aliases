@@ -23,9 +23,10 @@ alias gpg-show='gpg --list-secret-keys --keyid-format LONG'
 alias tree='tree -C'
 alias mirrors_update='sudo /usr/bin/reflector --protocol https --latest 15 --sort rate --save /etc/pacman.d/mirrorlist'
 alias cv-update='mv ~/downloads/CV.pdf ~/documents/cv/CV.pdf && zathura ~/documents/cv/CV.pdf'
+alias orphans_remove='sudo pacman -Rns $(pacman -Qtdq)'
 
 # Important aliases
-alias dotfiles_git='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Functions.
 xev-arch () {
@@ -38,4 +39,8 @@ packages () {
 
 stream_to_mpv () {
 	youtube-dl --playlist-random --ignore-config -f bestaudio -q -o - "$1" | mpv -
+}
+
+python_venv () {
+	/usr/bin/python -m venv $1 && source $1/bin/activate
 }
