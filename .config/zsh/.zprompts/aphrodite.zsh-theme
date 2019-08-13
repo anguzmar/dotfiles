@@ -8,13 +8,10 @@
 
 aphrodite_get_welcome_symbol() {
 
-	echo -n "%(?..%F{1})"
-
 	local welcome_symbol='$'
 	[ $EUID -ne 0 ] || welcome_symbol='#'
 
 	echo -n $welcome_symbol
-	echo -n "%(?..%f)"
 }
 
 aphrodite_get_prompt() {
