@@ -7,7 +7,6 @@ $ git clone --separate-git-dir=$HOME/.dotfiles https://github.com/anguzmar/dotfi
 
 ### If your home directory is **NOT** empty.
 ```shell
-$ git clone --separate-git-dir=$HOME/.dotfiles https://github.com/anguzmar/dotfiles $HOME/dotfiles-temp
+$ git clone --separate-git-dir=$HOME/.dotfiles https://github.com/anguzmar/dotfiles $HOME/dotfiles-tmp
 $ rm -r $HOME/dotfiles-tmp/
-$ alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
