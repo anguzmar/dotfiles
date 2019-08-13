@@ -26,6 +26,7 @@ promptinit
 ## SOURCE CONTROL RELATED STUFF ##
 autoload -Uz vcs_info
 setopt prompt_subst
+setopt COMPLETE_ALIASES
 
 # Select theme
 prompt aphrodite
