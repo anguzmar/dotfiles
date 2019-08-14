@@ -40,6 +40,7 @@ file
 filesystem
 findutils
 firefox
+flake8
 flameshot
 flashplugin
 flex
@@ -54,7 +55,6 @@ git
 glibc
 gnome-keyring
 gnu-free-fonts
-gnumeric
 gobject-introspection
 gopass
 grep
@@ -67,7 +67,6 @@ gvfs-goa
 gvfs-mtp
 gvfs-nfs
 gvfs-smb
-gvim
 gzip
 hashcat
 hexchat
@@ -139,6 +138,7 @@ pulseaudio
 pulseaudio-bluetooth
 python-dbus
 python-gobject
+python-matplotlib
 python-pip
 redshift
 reflector
