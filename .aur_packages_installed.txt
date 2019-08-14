@@ -1,4 +1,7 @@
-ida-free
+dirb
+ganttproject
+numix-gtk-theme
+pngcheck
 polybar
 siji-git
 ttf-monaco
