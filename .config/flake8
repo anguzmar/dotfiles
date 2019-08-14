@@ -1,0 +1,14 @@
+[flake8]
+max-line-length = 120
+
+# Comments and docstring length
+max-doc-length = 120
+
+# Ignore these:
+# H301: one import per line
+# H306: imports not in alphabetical order (time, os)
+# E265: block comment should start with '# '
+ignore = H301,H306,E265
+
+# Max function complexity. Apparently 10 is too much complexity
+max-complexity = 10
