@@ -33,6 +33,9 @@ prompt aphrodite
 ####################
 
 
+# Extended globbing
+setopt extended_glob
+
 # Fish-like syntax highlight
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
