@@ -11,6 +11,7 @@ Plug 'nvie/vim-flake8'
 Plug 'tmhedberg/SimpylFold'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-commentary'
 
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -19,19 +20,30 @@ endif
 
 call plug#end()
 
-" Custom maps
+" Map leader key
 let mapleader = ","
-nnoremap <Leader>q :bp<ENTER>
-nnoremap <Leader>w :bn<ENTER>
+
+" Buffer navigation and stuff
+noremap <C-left> :bprev<ENTER>
+noremap <C-right> :bnext<ENTER>
+noremap <C-W> :bdelete %<ENTER>
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_min_count = 2
+set hidden  " Set buffers to hidden. Allows to change buffers without having to save them
+
+" Toggle comments
+nmap <C-c> <Plug>CommentaryLine
+
+" Paste from clipboard
 nnoremap <Leader>p "0p
-nnoremap <C-n> :NERDTreeToggle<ENTER>
 
 " Hex editing
 nnoremap <Leader>h :%!xxd<ENTER>
 nnoremap <Leader>H :%!xxd -r<ENTER>
 
 " Remove trailing white spaces
-nnoremap <Leader>tr :%s/\s\+$//e <BAR> :w<ENTER>
+nnoremap <Leader>tr :%s/\s\+$//e <BAR> :noh<ENTER> <BAR> :w<ENTER>
+
 
 if has('nvim')
 tnoremap <Esc> <C-\><C-n>
@@ -58,6 +70,9 @@ hi Folded ctermbg=60 ctermfg=2
 " Deoplete settings
 let g:deoplete#enable_at_startup = 1
 
+" Autopair settings
+let g:AutoPairsShortcutToggle = '<M-a>'
+
 " Supertab settings
 "let g:SuperTabClosePreviewOnPopupClose = 1
 
@@ -69,6 +84,7 @@ set ttimeoutlen=20
 " Nerdtree settings
 let NERDTreeNaturalSort=1
 let NERDTreeMinimalUI=1
+nnoremap <C-n> :NERDTreeToggle<ENTER>
 
 " Devicons settings
 "let g:WebDevIconsUnicodeDecorateFolderNodes = 1
