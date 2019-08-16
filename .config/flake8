@@ -8,7 +8,10 @@ max-doc-length = 120
 # H301: one import per line
 # H306: imports not in alphabetical order (time, os)
 # E265: block comment should start with '# '
-ignore = H301,H306,E265
+# E266: too many leading '#' for block comment
+# F401: imported but unused
+# E116: unexpected indentation (comment)
+ignore = H301,H306,F401,E116
 
 # Max function complexity. Apparently 10 is too much complexity
 max-complexity = 10
