@@ -4,6 +4,7 @@
 nnoremap <A-p> :w !python<ENTER>
 nnoremap <A-b> oimport pdb; pdb.set_trace()<ESC>
 nnoremap <Leader>r :vs <Bar> :terminal python %<ENTER>
+noremap <Leader>f :!flake8 --isolated --max-line-length=120 %<ENTER>
 
 " Folding settings
 setlocal foldmethod=indent
