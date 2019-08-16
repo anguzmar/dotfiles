@@ -26,7 +26,7 @@ let mapleader = ","
 " Buffer navigation and stuff
 noremap <C-left> :bprev<ENTER>
 noremap <C-right> :bnext<ENTER>
-noremap <C-W> :bdelete %<ENTER>
+noremap <Leader>w :bdelete %<ENTER>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_min_count = 2
 set hidden  " Set buffers to hidden. Allows to change buffers without having to save them
