@@ -210,7 +210,8 @@ exec --no-startup-id  sleep 3s; wmctrl -r telegram -b remove,demands_attention
 # Media keys.
 bindsym XF86AudioPlay exec --no-startup-id mpc toggle
 bindsym Ctrl+F10 exec --no-startup-id mpc stop
-bindsym Ctrl+F11 exec --no-startup-id mpc add main && mpc consume on && mpc random on && mpc play
+bindsym $mod+Mod2+KP_1 exec --no-startup-id mpc clear && mpc add main && mpc consume on && mpc random on && mpc play
+bindsym $mod+Mod2+KP_2 exec --no-startup-id mpc clear && mpc add gym && mpc consume on && mpc random on && mpc play
 bindsym Ctrl+F9 exec --no-startup-id mpc clear
 bindsym XF86AudioNext exec --no-startup-id mpc next
 bindsym XF86AudioPrev exec --no-startup-id mpc prev
