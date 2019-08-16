@@ -6,7 +6,6 @@ alias diff='diff --color=auto'
 alias suspend='systemctl suspend'
 alias Q30='bluetoothctl power on; bluetoothctl connect 11:1F:00:01:D0:C3'
 alias disconnect-Q30='bluetoothctl disconnect 11:1F:00:01:D0:C3; bluetoothctl power off'
-alias music-update-main='youtube-dl -o "~/Media/Music/Main/%(title)s.%(ext)s" --download-archive ~/Media/Music/Main/archive.txt "https://www.youtube.com/playlist?list=PLDM507H18AIPZgxkmsaPBSiopZ_vntjhM"'
 alias weather='curl -s wttr.in | head -n -1'
 alias vim='nvim'
 alias ssh='TERM=xterm ssh'
@@ -37,8 +36,8 @@ packages () {
 	pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h
 }
 
-stream_to_mpv () {
-	youtube-dl --playlist-random --ignore-config -f bestaudio -q -o - "$1" | mpv -
+music_update (){
+	youtube-dl -o "~/media/music/$1/%(title)s.%(ext)s" --download-archive ~/media/music/$1/archive.txt "https://www.youtube.com/watch?v=TiVIFMbwxOc&list=PLDM507H18AINDSH_VtvW8HgCoLY9MEDjA"
 }
 
 python_venv () {
