@@ -54,3 +54,6 @@ if [ -f $HOME/.config/aliases ]; then
     source $HOME/.config/aliases
 fi
 
+if [ -f $HOME/.config/custom_functions ]; then
+    source $HOME/.config/custom_functions
+fi
