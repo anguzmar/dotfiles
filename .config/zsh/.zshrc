@@ -49,6 +49,19 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^E" end-of-line
 bindkey "^A" beginning-of-line
 
+####### SYNTAX HIGHLIGHT COLORS #######
+# Declare the variable (taken fron the documentation)
+typeset -A ZSH_HIGHLIGHT_STYLES
+
+ZSH_HIGHLIGHT_STYLES[path]='fg=39'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=201,bold'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=46,bold'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=196'
+ZSH_HIGHLIGHT_STYLES[arg0]='fg=69,bold'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=15,bold'
+ZSH_HIGHLIGHT_STYLES[function]='fg=202,bold'
+#####################
+
 # Load alises and functions. Also make sure the file exists.
 if [ -f $HOME/.config/aliases ]; then
     source $HOME/.config/aliases
