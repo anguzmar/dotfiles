@@ -17,7 +17,6 @@ if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 endif
-
 call plug#end()
 
 " Map leader key
@@ -44,7 +43,6 @@ nnoremap <Leader>H :%!xxd -r<ENTER>
 " Remove trailing white spaces
 nnoremap <Leader>tr :%s/\s\+$//e <BAR> :noh<ENTER> <BAR> :w<ENTER>
 
-
 if has('nvim')
 tnoremap <Esc> <C-\><C-n>
 nnoremap <Leader>te :terminal<ENTER>
@@ -57,8 +55,9 @@ set relativenumber
 set encoding=UTF-8
 set backupdir=~/.TMP
 set background=dark
-setlocal shiftwidth=4
-setlocal tabstop=4
+set shiftwidth=4
+set tabstop=4
+set scrolloff=1
 
 " Color scheme
 color evening
