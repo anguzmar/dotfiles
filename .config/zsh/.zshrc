@@ -53,6 +53,10 @@ bindkey "^A" beginning-of-line
 # Declare the variable (taken fron the documentation)
 typeset -A ZSH_HIGHLIGHT_STYLES
 
+# Activate highlighters
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
+# Common command line stuff
 ZSH_HIGHLIGHT_STYLES[path]='fg=39'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=201,bold'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=46,bold'
@@ -62,6 +66,14 @@ ZSH_HIGHLIGHT_STYLES[precommand]='fg=15,bold'
 ZSH_HIGHLIGHT_STYLES[function]='fg=202,bold'
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=201'
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=226,underline'
+
+# Bracket pairing
+ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=46,bold'
+ZSH_HIGHLIGHT_STYLES[bracket-level-2]='fg=202,bold'
+ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=226,bold'
+ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=129,bold'
+ZSH_HIGHLIGHT_STYLES[bracket-error]='fg=196,bold'
+ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]='fg=14,bold,standout'
 #####################
 
 # Load alises and functions. Also make sure the file exists.
