@@ -1,21 +1,21 @@
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on':  'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'nvie/vim-flake8'
-Plug 'tmhedberg/SimpylFold'
-Plug 'vim-scripts/indentpython.vim'
+Plug 'nvie/vim-flake8', { 'for': 'python' }
+Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
+Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 endif
 
 call plug#end()
@@ -24,8 +24,8 @@ call plug#end()
 let mapleader = ","
 
 " Buffer navigation and stuff
-noremap <C-left> :bprev<ENTER>
-noremap <C-right> :bnext<ENTER>
+noremap <C-right> :bprev<ENTER>
+noremap <C-left> :bnext<ENTER>
 noremap <Leader>w :bdelete %<ENTER>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_min_count = 2
@@ -99,6 +99,17 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Resizing
+nnoremap _ <C-W><C-_>
+nnoremap = <C-W><C-=>
+nnoremap - <C-W><C-->
+nnoremap + <C-W><C-+>
+nnoremap <left> :vertical resize +1<ENTER>
+nnoremap <right> :vertical resize -1<ENTER>
+
+" Close preview window
+nnoremap <C-z> <C-W><C-z>
+
 " Change directory to match the file's
 autocmd BufEnter * silent! lcd %:p:h
 
@@ -109,7 +120,7 @@ let g:tex_flavor='latex'
 let g:vimtex_enable='0'
 
 " Fuck square bracket. Some custom keyboard mappings
-set langmap='[,¡],+=,º`
+set langmap='[,¡],ç=,º`
 
 " Format options.
 set textwidth=120
