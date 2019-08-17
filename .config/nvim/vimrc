@@ -24,8 +24,8 @@ call plug#end()
 let mapleader = ","
 
 " Buffer navigation and stuff
-noremap <C-right> :bprev<ENTER>
-noremap <C-left> :bnext<ENTER>
+noremap <C-left> :bprev<ENTER>
+noremap <C-right> :bnext<ENTER>
 noremap <Leader>w :bdelete %<ENTER>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_min_count = 2
@@ -52,8 +52,6 @@ endif
 
 " Useful stuff
 syntax enable
-"set showmode
-"set showcmd
 set number
 set relativenumber
 set encoding=UTF-8
@@ -101,9 +99,10 @@ nnoremap <C-H> <C-W><C-H>
 
 " Resizing
 nnoremap _ <C-W><C-_>
+nnoremap <BAR> :vertical-resize CTRL-W_bar<ENTER>
 nnoremap = <C-W><C-=>
-nnoremap - <C-W><C-->
-nnoremap + <C-W><C-+>
+nnoremap <down> <C-W><C-->
+nnoremap <up> <C-W><C-+>
 nnoremap <left> :vertical resize +1<ENTER>
 nnoremap <right> :vertical resize -1<ENTER>
 
