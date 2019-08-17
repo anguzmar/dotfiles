@@ -60,6 +60,8 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=196'
 ZSH_HIGHLIGHT_STYLES[arg0]='fg=69,bold'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=15,bold'
 ZSH_HIGHLIGHT_STYLES[function]='fg=202,bold'
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=201'
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=226,underline'
 #####################
 
 # Load alises and functions. Also make sure the file exists.
