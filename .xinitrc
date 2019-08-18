@@ -11,7 +11,7 @@ export SSH_AUTH_SOCK
 # Disable touchpad
 xinput disable "SynPS/2 Synaptics TouchPad"
 
-# Activate Numlock on Bootup
+# Activate Numlock on bootup
 numlockx &
 
 # Launch applications on startup
