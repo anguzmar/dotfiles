@@ -49,6 +49,9 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^E" end-of-line
 bindkey "^A" beginning-of-line
 
+# Keybinds for the lazy
+bindkey -s '^o' 'dot status^M'
+
 ####### SYNTAX HIGHLIGHT COLORS #######
 # Declare the variable (taken fron the documentation)
 typeset -A ZSH_HIGHLIGHT_STYLES
