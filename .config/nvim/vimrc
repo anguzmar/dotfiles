@@ -19,13 +19,16 @@ Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 endif
 call plug#end()
 
+" Clear search highlighting
+nnoremap <silent> <esc> :noh<return><esc>
+
 " Map leader key
 let mapleader = ","
 
 " Buffer navigation and stuff
-noremap <C-left> :bprev<ENTER>
-noremap <C-right> :bnext<ENTER>
-noremap <Leader>w :bdelete %<ENTER>
+noremap <silent> <C-left> :bprev<ENTER>
+noremap <silent> <C-right> :bnext<ENTER>
+noremap <silent> <Leader>w :bdelete %<ENTER>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_min_count = 2
 set hidden  " Set buffers to hidden. Allows to change buffers without having to save them
@@ -41,11 +44,11 @@ nnoremap <Leader>h :%!xxd<ENTER>
 nnoremap <Leader>H :%!xxd -r<ENTER>
 
 " Remove trailing white spaces
-nnoremap <Leader>tr :%s/\s\+$//e <BAR> :noh<ENTER> <BAR> :w<ENTER>
+nnoremap <silent> <Leader>tr :%s/\s\+$//e <BAR> :noh<ENTER> <BAR> :w<ENTER>
 
 if has('nvim')
 tnoremap <Esc> <C-\><C-n>
-nnoremap <Leader>te :terminal<ENTER>
+nnoremap <silent> <Leader>te :terminal<ENTER>
 endif
 
 " Useful stuff
@@ -81,7 +84,7 @@ set ttimeoutlen=20
 " Nerdtree settings
 let NERDTreeNaturalSort=1
 let NERDTreeMinimalUI=1
-nnoremap <C-n> :NERDTreeToggle<ENTER>
+nnoremap <silent> <C-n> :NERDTreeToggle<ENTER>
 
 " Devicons settings
 "let g:WebDevIconsUnicodeDecorateFolderNodes = 1
@@ -98,12 +101,12 @@ nnoremap <C-H> <C-W><C-H>
 
 " Resizing
 nnoremap _ <C-W><C-_>
-nnoremap <BAR> :vertical-resize CTRL-W_bar<ENTER>
+nnoremap <silent> <BAR> :vertical-resize CTRL-W_bar<ENTER>
 nnoremap = <C-W><C-=>
 nnoremap <down> <C-W><C-->
 nnoremap <up> <C-W><C-+>
-nnoremap <left> :vertical resize +1<ENTER>
-nnoremap <right> :vertical resize -1<ENTER>
+nnoremap <silent> <left> :vertical resize +1<ENTER>
+nnoremap <silent> <right> :vertical resize -1<ENTER>
 
 " Close preview window
 nnoremap <C-z> <C-W><C-z>
