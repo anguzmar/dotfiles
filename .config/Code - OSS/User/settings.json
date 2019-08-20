@@ -1,12 +1,10 @@
 {
     "editor.fontFamily": "'Monaco','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 14,
-    "editor.wordWrapColumn": 120,
+    "editor.wordWrapColumn": 100,
     "editor.lineNumbers": "relative",
     "workbench.colorTheme": "Night Owl",
-    "python.linting.flake8Args": [
-        "--max-line-length=120"
-    ],
+    "python.formatting.blackArgs": ["--line-length", "100"],
     "workbench.editor.showTabs": true,
     "workbench.startupEditor": "newUntitledFile",
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -21,10 +19,9 @@
     ],
     "terminal.integrated.fontFamily": "Inconsolata",
     "editor.rulers": [
-        120
+        100
     ],
     "git.autofetch": true,
-    "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "vim.leader": ",",
     "vim.handleKeys":{
@@ -32,7 +29,11 @@
         "<C-w>": false,
         "<C-k>": false,
     },
-    "vim.textwidth": 120,
+    "vim.textwidth": 100,
     "sync.gist": "014ff4f98b11de2ba52fc67bbc3abcbd",
     "terminal.integrated.shell.linux": "/bin/zsh",
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.formatting.blackPath": "/usr/bin/black",
 }
