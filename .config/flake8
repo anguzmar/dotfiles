@@ -1,8 +1,8 @@
 [flake8]
-max-line-length = 120
+max-line-length = 100
 
 # Comments and docstring length
-max-doc-length = 120
+max-doc-length = 100
 
 # Ignore these:
 # H301: one import per line
