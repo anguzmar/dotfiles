@@ -123,11 +123,11 @@ let g:tex_flavor='latex'
 " Disable file specific plugins
 let g:vimtex_enable='0'
 
-" Fuck square bracket. Some custom keyboard mappings
+" Fuck curly brackets in the spanish layout. Some custom keyboard mappings
 set langmap=+{,ç},ñ`
 
 " Format options.
-set textwidth=120
+set textwidth=100
 au FileType * set fo-=o fo-=r  " o and r = auto insert comment leader on normal mode and insert mode respectively
 
 " Performance.
