@@ -12,6 +12,7 @@ Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
+Plug 'psf/black', { 'for': 'python' }
 
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -66,6 +67,9 @@ set scrolloff=1
 color evening
 hi Normal ctermbg=None
 hi Folded ctermbg=60 ctermfg=2
+
+" Black settings
+let g:black_linelength = 100
 
 " Deoplete settings
 let g:deoplete#enable_at_startup = 1
