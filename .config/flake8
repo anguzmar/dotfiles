@@ -11,7 +11,9 @@ max-doc-length = 120
 # E266: too many leading '#' for block comment
 # F401: imported but unused
 # E116: unexpected indentation (comment)
-ignore = H301,H306,F401,E116
+# W503: line break before binary operator | NOT PEP8 COMPLIANT
+# E203: whitespace before ':' | NOT PEP8 COMPLIANT
+ignore = H301,H306,E116,W503,E203
 
 # Max function complexity. Apparently 10 is too much complexity
 max-complexity = 10
