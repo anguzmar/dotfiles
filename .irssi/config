@@ -304,13 +304,39 @@ statusbar = {
 };
 settings = {
   core = { real_name = "Angel"; user_name = "angel"; nick = "angel"; };
-  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-text" = { 
+    actlist_sort = "refnum";
+    autostick_split_windows = "yes";
+  };
   "fe-common/core" = {
     names_max_columns = "0";
     show_names_on_join = "no";
     completion_auto = "yes";
   };
+  "perl/core/scripts" = {
+    awl_shared_sbar = "OFF";
+    trackbar_use_status_window = "no";
+  };
 };
 ignores = (
-  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#archlinux" ); }
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#archlinux" ); },
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#irssi" ); }
 );
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  9 = { name = "hilight"; sticky = "yes"; };
+};
+mainwindows = {
+  1 = { 
+    first_line = "6";
+    lines = "45";
+    first_column = "0";
+    columns = "213";
+  };
+  9 = { 
+    first_line = "1";
+    lines = "5";
+    first_column = "0";
+    columns = "213";
+  };
+};
