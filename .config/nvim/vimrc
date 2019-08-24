@@ -14,6 +14,7 @@ Plug 'tpope/vim-commentary'
 Plug 'psf/black', { 'for': 'python' }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-ragtag'
+Plug 'vim-python/python-syntax', { 'for': 'python' }
 
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
