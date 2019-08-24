@@ -79,7 +79,7 @@ let g:deoplete#enable_at_startup = 1
 let g:AutoPairsShortcutToggle = '<M-a>'
 
 " Supertab settings
-"let g:SuperTabClosePreviewOnPopupClose = 1
+let g:SuperTabClosePreviewOnPopupClose = 1
 
 " Vim airline settings
 let g:airline_theme='deus'
