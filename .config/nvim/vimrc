@@ -12,6 +12,8 @@ Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'psf/black', { 'for': 'python' }
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-ragtag'
 
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
