@@ -10,7 +10,12 @@ noremap <silent> <leader>b :Black<ENTER>
 " Folding settings
 setlocal foldmethod=indent
 setlocal foldlevel=99
-nnoremap <SPACE> za
+nnoremap <buffer> <SPACE> za
+
+" Enchanged syntax hilight
+let g:python_highlight_space_errors = 0
+let g:python_highlight_indent_errors = 0
+let g:python_highlight_all = 1
 
 " Flake8 settings
 " autocmd BufWritePost *.py call flake8#Flake8()  " Run flake8 when saving
