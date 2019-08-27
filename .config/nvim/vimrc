@@ -15,6 +15,7 @@ Plug 'psf/black', { 'for': 'python' }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-ragtag'
 Plug 'vim-python/python-syntax', { 'for': 'python' }
+Plug 'terryma/vim-multiple-cursors'
 
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -69,6 +70,7 @@ set scrolloff=1
 color evening
 hi Normal ctermbg=None
 hi Folded ctermbg=60 ctermfg=2
+hi Visual cterm=bold ctermbg=White ctermfg=Red
 
 " Black settings
 let g:black_linelength = 100
