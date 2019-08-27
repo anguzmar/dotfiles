@@ -87,6 +87,8 @@ let g:AutoPairsShortcutToggle = '<M-a>'
 
 " Supertab settings
 let g:SuperTabClosePreviewOnPopupClose = 1
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-p>"
 
 " Vim airline settings
 let g:airline_theme='deus'
@@ -98,8 +100,19 @@ let NERDTreeNaturalSort=1
 let NERDTreeMinimalUI=1
 nnoremap <silent> <C-n> :NERDTreeToggle<ENTER>
 
+" Multicursor settings
+let g:multi_cursor_use_default_mapping = 0
+let g:multi_cursor_start_word_key      = '<C-m>'
+let g:multi_cursor_select_all_word_key = '<A-m>'
+let g:multi_cursor_start_key           = 'g<C-m>'
+let g:multi_cursor_select_all_key      = 'g<A-m>'
+let g:multi_cursor_next_key            = '<C-m>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+
 " Devicons settings
-"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 0
 
 " Split settings
 set splitbelow
@@ -129,15 +142,9 @@ autocmd BufEnter * silent! lcd %:p:h
 " Make sure it understands what .tex means
 let g:tex_flavor='latex'
 
-" Disable file specific plugins
-let g:vimtex_enable='0'
-
 " Fuck curly brackets in the spanish layout. Some custom keyboard mappings
 set langmap=+{,ç},ñ`
 
 " Format options.
 set textwidth=100
 au FileType * set fo-=o fo-=r  " o and r = auto insert comment leader on normal mode and insert mode respectively
-
-" Performance.
-set ttyfast
