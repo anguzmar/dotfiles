@@ -316,6 +316,11 @@ settings = {
   "perl/core/scripts" = {
     awl_shared_sbar = "OFF";
     trackbar_use_status_window = "no";
+    nickcolor_enable_prefix = "no";
+    nickcolor_enable_truncate = "yes";
+    nickcolor_prefix_text = "-";
+    nickcolor_truncate_value = "-10";
+    nickcolor_colors = "2 3 4 5 6 7 9 10 11 12 13";
   };
 };
 ignores = (
