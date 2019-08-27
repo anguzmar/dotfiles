@@ -70,7 +70,7 @@ set scrolloff=1
 color evening
 hi Normal ctermbg=None
 hi Folded ctermbg=60 ctermfg=2
-hi Visual cterm=bold ctermbg=White ctermfg=Red
+hi Visual cterm=bold ctermbg=White ctermfg=Black
 
 " Black settings
 let g:black_linelength = 100
@@ -92,7 +92,8 @@ let g:SuperTabContextDefaultCompletionType = "<c-p>"
 
 " Vim airline settings
 let g:airline_theme='deus'
-let g:airline_powerline_fonts = 1
+let g:airline_exclude_preview = 1
+let g:airline_section_c = "%{expand('%:p:h:t')}/%t"
 set ttimeoutlen=20
 
 " Nerdtree settings
