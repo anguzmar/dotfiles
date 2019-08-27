@@ -1,11 +1,11 @@
 " Activate plugins
 
 " Custom maps
-nnoremap <A-p> :w !python<ENTER>
-nnoremap <A-b> oimport pdb; pdb.set_trace()<ESC>
-nnoremap <Leader>r :vs <Bar> :terminal python %<ENTER>
-noremap <Leader>f :!flake8 %<ENTER>
-noremap <silent> <leader>b :Black<ENTER>
+nnoremap <buffer> <A-p> :w !python %<ENTER>
+nnoremap <buffer> <A-b> oimport pdb; pdb.set_trace()<ESC>
+nnoremap <buffer> <silent> <Leader>r :vs <Bar> :terminal python %<ENTER>
+nnoremap <buffer> <Leader>f :!flake8 %<ENTER>
+nnoremap <buffer> <silent> <leader>b :Black<ENTER>
 
 " Folding settings
 setlocal foldmethod=indent
