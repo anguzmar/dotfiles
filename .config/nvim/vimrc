@@ -77,6 +77,10 @@ let g:black_linelength = 100
 
 " Deoplete settings
 let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option('max_list', 20)
+call deoplete#custom#source('_', 'matchers', ['matcher_head'])
+hi Pmenu ctermbg=White ctermfg=Black
+hi PmenuSel ctermbg=Green ctermfg=Black
 
 " Autopair settings
 let g:AutoPairsShortcutToggle = '<M-a>'
