@@ -36,3 +36,4 @@ let g:python2_host_prog = '/usr/bin/python2'
 
 " Format options
 au FileType python set fo+=c  " c = autowrap comments
+au FileType python set fo-=t  " t = autowrap text using textwidth
