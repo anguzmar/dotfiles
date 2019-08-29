@@ -11,6 +11,6 @@ music_update (){
 	youtube-dl -o "~/media/music/$1/%(title)s.%(ext)s" --download-archive ~/media/music/$1/archive.txt "https://www.youtube.com/watch?v=TiVIFMbwxOc&list=PLDM507H18AINDSH_VtvW8HgCoLY9MEDjA"
 }
 
-python_venv () {
+pvenv () {
 	/usr/bin/python -m venv $1 && source $1/bin/activate
 }
