@@ -80,7 +80,7 @@ let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option('max_list', 20)
 call deoplete#custom#source('_', 'matchers', ['matcher_head'])
 hi Pmenu ctermbg=White ctermfg=Black
-hi PmenuSel ctermbg=Red ctermfg=White
+hi PmenuSel ctermbg=Magenta ctermfg=White
 
 " Autopair settings
 let g:AutoPairsShortcutToggle = '<M-a>'
