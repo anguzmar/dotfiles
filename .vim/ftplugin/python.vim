@@ -1,7 +1,7 @@
 " Activate plugins
 
 " Custom maps
-nnoremap <buffer> <A-p> :w !python %<ENTER>
+nnoremap <buffer> <silent> <A-p> :w !python %<ENTER>
 nnoremap <buffer> <A-b> oimport pdb; pdb.set_trace()<ESC>
 nnoremap <buffer> <silent> <Leader>r :vs <Bar> :terminal python %<ENTER>
 nnoremap <buffer> <Leader>f :!flake8 %<ENTER>
