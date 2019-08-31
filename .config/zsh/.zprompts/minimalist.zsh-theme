@@ -5,7 +5,7 @@
 
 minimalist_get_prompt() {
 
-	echo -n "%B%F{208}%2~%f%b " # Dir
+	echo -n "%F{207}%2~%f " # Dir
 	echo -n "${vcs_info_msg_0_}" # Git branch
 	echo -n "%B%F{46}>%f%b%{$reset_color%} " # $ or #
 }
