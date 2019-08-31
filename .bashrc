@@ -8,7 +8,11 @@ PS1='[\u@\h \W]\$ '
 # Enable forward-search (when using Ctrl-R) with Ctrl-S:
 stty -ixon
 
-# Load alises and functions. Also make sure the file exists.
+# FZF completion and keybinds
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
+
+# Load alises and functions. Also make sure the file exists
 if [ -f $HOME/.config/aliases ]; then
     source $HOME/.config/aliases
 fi
