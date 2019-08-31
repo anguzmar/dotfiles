@@ -20,4 +20,4 @@ export PYTHONDONTWRITEBYTECODE=1
 
 # FZF settings
 export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude '.git'"
-export FZF_DEFAULT_OPTS="--no-mouse --height 50% --preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -50'"
+export FZF_DEFAULT_OPTS="--border --no-mouse --height 50% --preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -50'"
