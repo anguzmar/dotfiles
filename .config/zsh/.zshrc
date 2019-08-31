@@ -29,7 +29,7 @@ setopt prompt_subst
 setopt COMPLETE_ALIASES
 
 # Select theme
-prompt aphrodite
+prompt minimalist
 ####################
 
 
