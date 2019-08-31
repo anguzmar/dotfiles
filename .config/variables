@@ -1,6 +1,7 @@
 # Some basic quality of life
 export EDITOR=nvim
 export TERM=termite
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # How the song is displayed in polybar
 export MPC_FORMAT="%position% %file%"
