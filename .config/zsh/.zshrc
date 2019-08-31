@@ -39,11 +39,12 @@ setopt extended_glob
 # Fish-like syntax highlight
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# FZF keybinds and autocompletion
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
 # Find new executables in $PATH when using autocompletion
 zstyle ':completion:*' rehash true
-
-# Enable Ctrl+R history search (disabled at first because of vi keybinds)
-bindkey "^R" history-incremental-search-backward
 
 # Enable some useful commands in insert mode
 bindkey "^E" end-of-line
@@ -51,6 +52,7 @@ bindkey "^A" beginning-of-line
 
 # Keybinds for the lazy
 bindkey -s '^o' 'dot status^M'
+
 
 ####### SYNTAX HIGHLIGHT COLORS #######
 # Declare the variable (taken fron the documentation)
@@ -80,6 +82,7 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=129,bold'
 ZSH_HIGHLIGHT_STYLES[bracket-error]='fg=196,bold'
 ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]='fg=14,bold,standout'
 #####################
+
 
 # Load alises and functions. Also make sure the file exists.
 if [ -f $HOME/.config/aliases ]; then
