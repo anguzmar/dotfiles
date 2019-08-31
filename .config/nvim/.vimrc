@@ -70,6 +70,8 @@ set scrolloff=1
 color evening
 hi Normal ctermbg=None
 hi Folded ctermbg=60 ctermfg=2
+hi LineNr ctermfg=255
+hi CursorLineNr ctermfg=255
 hi Visual cterm=bold ctermbg=White ctermfg=Black
 
 " Black settings
