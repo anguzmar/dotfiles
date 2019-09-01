@@ -1,6 +1,5 @@
 # Some basic quality of life
 export EDITOR=nvim
-export TERM=termite
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # How the song is displayed in polybar
@@ -18,7 +17,7 @@ export GPG_TTY=$(tty)
 export PYTHONDONTWRITEBYTECODE=1
 
 # FZF settings
-fd_options="--hidden --follow --exclude '.git'"
+fd_options="--hidden --follow -E '.git' -E '.cache' -E '__pycache__' -E 'site-packages'"
 export FZF_DEFAULT_COMMAND="fd ${fd_options}"
 export FZF_DEFAULT_OPTS="--border --no-mouse --height 50% --preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -500' --bind='f2:toggle-preview,ctrl-d:preview-page-down,ctrl-u:preview-page-up'"
 export FZF_ALT_C_COMMAND="fd ${fd_options}"
