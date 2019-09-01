@@ -185,12 +185,10 @@ exec_always --no-startup-id feh --bg-scale ~/media/pictures/glados.jpg
 bindsym $mod+Shift+x exec i3lock -e -i ~/media/pictures/lambda.png
 bindsym $mod+o exec --no-startup-id firefox
 bindsym $mod+c exec --no-startup-id code; workspace $ws3
-bindsym $mod+Print exec --no-startup-id maim ~/media/pictures/screenshot.png
 bindsym Print exec --no-startup-id flameshot gui
-#bindsym $mod+Print exec --no-startup-id sh ~/Coding/Bash/screenshot.sh
 bindsym $mod+Shift+S exec --no-startup-id systemctl suspend
-bindsym $mod+p exec $TERM -e python
-bindsym $mod+n exec --no-startup-id $TERM -e nnn
+bindsym $mod+p exec alacritty -e python
+bindsym $mod+n exec --no-startup-id alacritty -e nnn
 
 # Assign workspaces.
 assign [class="Thunderbird"] $ws9
@@ -201,8 +199,8 @@ assign [class="code"] $ws3
 exec --no-startup-id compton
 #exec --no-startup-id telegram-desktop
 exec --no-startup-id nm-applet
-exec --no-startup-id i3-msg 'workspace $ws2; exec $TERM'
-exec --no-startup-id sleep 1s; i3-msg 'workspace $ws10; exec $TERM -e calcurse; workspace $ws1'
+exec --no-startup-id i3-msg 'workspace $ws2; exec alacritty'
+exec --no-startup-id sleep 1s; i3-msg 'workspace $ws10; exec alacritty -e calcurse; workspace $ws1'
 
 exec --no-startup-id  sleep 3s; wmctrl -r telegram -b remove,demands_attention
 
