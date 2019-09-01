@@ -3,11 +3,25 @@
 # Author: Angel Guzman
 # ------------------------------------------------------------------------------
 
+####### Detect VI mode #######
+KEYTIMEOUT=1  # Remove delay when switching modes.
+vim_ins_mode="%F{46}>%f"
+vim_cmd_mode="%F{196}<%f"
+
+function zle-line-init zle-keymap-select {
+	vim_mode="${${KEYMAP/vicmd/${vim_cmd_mode}}/(main|viins)/${vim_ins_mode}}"
+	zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+##############################
+
+
 minimalist_get_prompt() {
 
 	echo -n "%F{207}%2~%f " # Dir
 	echo -n "${vcs_info_msg_0_}" # Git branch
-	echo -n "%B%F{46}>%f%b%{$reset_color%} " # $ or #
+	echo -n "%B${vim_mode}%b%{$reset_color%} "
 }
 
 
