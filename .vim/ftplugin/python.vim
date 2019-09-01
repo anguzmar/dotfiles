@@ -5,6 +5,7 @@ nnoremap <buffer> <silent> <Leader>r :vs <Bar> :terminal python %<ENTER>
 nnoremap <buffer> <Leader>f :!flake8 %<ENTER>
 nnoremap <buffer> <silent> <leader>b :Black<ENTER>
 nnoremap <buffer> <silent> <leader>i :!isort %<ENTER>
+nnoremap <buffer> <silent> <leader>m :!mypy %<ENTER>
 
 " Folding settings
 setlocal foldmethod=indent
