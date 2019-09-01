@@ -1,11 +1,10 @@
-" Activate plugins
-
 " Custom maps
 nnoremap <buffer> <silent> <A-p> :w !python %<ENTER>
 nnoremap <buffer> <A-b> oimport pdb; pdb.set_trace()<ESC>
 nnoremap <buffer> <silent> <Leader>r :vs <Bar> :terminal python %<ENTER>
 nnoremap <buffer> <Leader>f :!flake8 %<ENTER>
 nnoremap <buffer> <silent> <leader>b :Black<ENTER>
+nnoremap <buffer> <silent> <leader>i :!isort %<ENTER>
 
 " Folding settings
 setlocal foldmethod=indent
@@ -16,9 +15,6 @@ nnoremap <buffer> <SPACE> za
 let g:python_highlight_space_errors = 0
 let g:python_highlight_indent_errors = 0
 let g:python_highlight_all = 1
-
-" Flake8 settings
-" autocmd BufWritePost *.py call flake8#Flake8()  " Run flake8 when saving
 
 " Indents and stuff
 setlocal tabstop=4
