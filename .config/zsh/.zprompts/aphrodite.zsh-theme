@@ -6,6 +6,20 @@
 # Modified by Angel Guzman
 # ------------------------------------------------------------------------------
 
+####### Detect VI mode #######
+KEYTIMEOUT=1  # Remove delay when switching modes.
+vim_ins_mode="%F{46}[I]%f"
+vim_cmd_mode="%F{196}[N]%f"
+
+function zle-line-init zle-keymap-select {
+	vim_mode="${${KEYMAP/vicmd/${vim_cmd_mode}}/(main|viins)/${vim_ins_mode}}"
+	zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+##############################
+
+
 aphrodite_get_welcome_symbol() {
 
 	local welcome_symbol='$'
@@ -16,6 +30,7 @@ aphrodite_get_welcome_symbol() {
 
 aphrodite_get_prompt() {
 
+	echo -n "%B${vim_mode}%b " # Vim mode
 	echo -n "%B%F{51}%n%f" # User
 	echo -n "%F{8}@%f" # at
 	echo -n "%F{226}%m%f%b" # Host
