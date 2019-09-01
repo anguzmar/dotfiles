@@ -19,7 +19,7 @@ zle -N zle-keymap-select
 
 minimalist_get_prompt() {
 
-	echo -n "%F{207}%2~%f " # Dir
+	echo -n "%B%F{15}%2~%f%b " # Dir
 	echo -n "${vcs_info_msg_0_}" # Git branch
 	echo -n "%B${vim_mode}%b%{$reset_color%} "
 }
