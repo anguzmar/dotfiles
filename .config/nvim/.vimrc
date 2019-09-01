@@ -41,7 +41,7 @@ set hidden  " Set buffers to hidden. Allows to change buffers without having to 
 nmap <C-c> <Plug>CommentaryLine
 
 " Paste the latest yank
-nnoremap <Leader>p "0p
+nnoremap <Leader>v "0p
 
 " Hex editing
 nnoremap <Leader>h :%!xxd<ENTER>
