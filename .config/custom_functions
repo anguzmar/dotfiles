@@ -14,3 +14,14 @@ music_update (){
 pvenv () {
 	/usr/bin/python -m venv $1 && source $1/bin/activate
 }
+
+
+# FZF settings. Make the ** completion use "fd".
+_fzf_compgen_path() {
+	fd ${FD_OPTIONS[@]} . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+	fd --type d ${FD_OPTIONS[@]} . "$1"
+}
