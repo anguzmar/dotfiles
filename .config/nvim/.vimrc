@@ -43,8 +43,10 @@ nmap <C-c> <Plug>CommentaryLine
 " Paste the latest yank
 nnoremap <C-y> "0p
 
-" Copy/paste to/from clipboard
+" Copy the entire file to the clipboard
 nnoremap <silent> <Leader>c :%y+<ENTER>
+
+" Paste from clipboard
 nnoremap <Leader>v "+p
 
 " Hex editing
