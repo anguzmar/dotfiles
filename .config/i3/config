@@ -105,7 +105,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9:"
-set $ws10 "10:"
+set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -200,7 +200,6 @@ exec --no-startup-id compton
 #exec --no-startup-id telegram-desktop
 exec --no-startup-id nm-applet
 exec --no-startup-id i3-msg 'workspace $ws2; exec alacritty'
-exec --no-startup-id sleep 1s; i3-msg 'workspace $ws10; exec alacritty -e calcurse; workspace $ws1'
 
 exec --no-startup-id  sleep 3s; wmctrl -r telegram -b remove,demands_attention
 
