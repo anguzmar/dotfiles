@@ -27,10 +27,6 @@ setlocal textwidth=100
 setlocal colorcolumn=+1
 highlight ColorColumn ctermbg=2
 
-" Python paths
-let g:python3_host_prog = '/usr/bin/python'
-let g:python2_host_prog = '/usr/bin/python2'
-
 " Format options
 au FileType python set fo+=c  " c = autowrap comments
 au FileType python set fo-=t  " t = autowrap text using textwidth

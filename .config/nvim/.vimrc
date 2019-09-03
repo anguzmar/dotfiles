@@ -161,3 +161,7 @@ set langmap=+{,ç},ñ`
 " Format options.
 set textwidth=100
 au FileType * set fo-=o fo-=r  " o and r = auto insert comment leader on normal mode and insert mode respectively
+
+" Python paths
+let g:python3_host_prog = '/usr/bin/python'
+let g:python2_host_prog = '/usr/bin/python2'
