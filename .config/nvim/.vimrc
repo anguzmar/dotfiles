@@ -2,10 +2,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'  " Used for tab completion
 Plug 'lervag/vimtex', { 'for': 'tex' }  " LaTeX + VIM
 Plug 'vim-airline/vim-airline'  " A better statusline
-Plug 'vim-airline/vim-airline-themes' 
+Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }  " Visualize directory within VIM
 Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }  " Add icons for nerdtree according to the filetype
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on':  'NERDTreeToggle' }  
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on':  'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim'  " Fuzzy file finder
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' }  " Better folding for Python
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }  " Better automatic indentation for Python multiple line command
@@ -127,6 +127,9 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 0
 " ctrlP settings
 let g:ctrlp_match_current_file = 0
 let g:ctrlp_mruf_max = 50
+
+" netrw settings
+let g:netrw_banner = 0
 
 " Split settings
 set splitbelow
