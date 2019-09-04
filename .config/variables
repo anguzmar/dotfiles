@@ -28,3 +28,4 @@ export MANPAGER="nvim -c 'set ft=man' -"
 
 # taskrc location
 export TASKRC="$HOME/.config/taskrc"
+export TASKDATA="$HOME/.config/task"
