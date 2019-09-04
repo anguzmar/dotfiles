@@ -1,25 +1,26 @@
 call plug#begin('~/.vim/plugged')
-Plug 'ervandew/supertab'
-Plug 'lervag/vimtex', { 'for': 'tex' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on':  'NERDTreeToggle' }
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
-Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
-Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-commentary'
-Plug 'psf/black', { 'for': 'python' }
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-ragtag'
-Plug 'vim-python/python-syntax', { 'for': 'python' }
-Plug 'terryma/vim-multiple-cursors'
+Plug 'ervandew/supertab'  " Used for tab completion
+Plug 'lervag/vimtex', { 'for': 'tex' }  " LaTeX + VIM
+Plug 'vim-airline/vim-airline'  " A better statusline
+Plug 'vim-airline/vim-airline-themes' 
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }  " Visualize directory within VIM
+Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }  " Add icons for nerdtree according to the filetype
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on':  'NERDTreeToggle' }  
+Plug 'ctrlpvim/ctrlp.vim'  " Fuzzy file finder
+Plug 'tmhedberg/SimpylFold', { 'for': 'python' }  " Better folding for Python
+Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }  " Better automatic indentation for Python multiple line command
+Plug 'jiangmiao/auto-pairs'  " Automatically generate matching pair for brackets and quotes
+Plug 'tpope/vim-commentary'  " Easy comment toggling
+Plug 'psf/black', { 'for': 'python' }  " A godsend. Autoformatter for Python
+Plug 'tpope/vim-surround'  " Add, remove or change pairs of brackets/quotes easily
+Plug 'tpope/vim-ragtag'  " Rad plugin for HTML tags
+Plug 'vim-python/python-syntax', { 'for': 'python' }  " Enhanced Python syntax (yield, f-strings, etc.)
+Plug 'terryma/vim-multiple-cursors'  " Emulate sublime's multicursor. Handy for refactoring
+Plug 'tpope/vim-fugitive'  " Git wrapper
 
 if has('nvim')
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  " Autocompletion engine
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }  " Autocompletion library for Python
 endif
 call plug#end()
 
@@ -156,7 +157,7 @@ autocmd BufEnter * silent! lcd %:p:h
 let g:tex_flavor='latex'
 
 " Fuck curly brackets in the spanish layout. Some custom keyboard mappings
-set langmap=+{,ç},ñ`
+set langmap=ñ`
 
 " Format options.
 set textwidth=100
