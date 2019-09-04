@@ -15,8 +15,8 @@ Plug 'psf/black', { 'for': 'python' }  " A godsend. Autoformatter for Python
 Plug 'tpope/vim-surround'  " Add, remove or change pairs of brackets/quotes easily
 Plug 'tpope/vim-ragtag'  " Rad plugin for HTML tags
 Plug 'vim-python/python-syntax', { 'for': 'python' }  " Enhanced Python syntax (yield, f-strings, etc.)
-Plug 'terryma/vim-multiple-cursors'  " Emulate sublime's multicursor. Handy for refactoring
 Plug 'tpope/vim-fugitive'  " Git wrapper
+Plug 'tpope/vim-repeat'  " Repeat 'some' Plugin commands with '.'
 
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  " Autocompletion engine
