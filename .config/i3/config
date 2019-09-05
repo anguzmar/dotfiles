@@ -197,11 +197,9 @@ assign [class="code"] $ws3
 
 # Execute stuff.
 exec --no-startup-id compton
-#exec --no-startup-id telegram-desktop
 exec --no-startup-id nm-applet
+exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id i3-msg 'workspace $ws2; exec alacritty'
-
-exec --no-startup-id  sleep 3s; wmctrl -r telegram -b remove,demands_attention
 
 # Media keys.
 bindsym XF86AudioPlay exec --no-startup-id mpc toggle
