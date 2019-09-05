@@ -17,7 +17,8 @@ compinit
 
 ####### THEME RELATED STUFF #######
 # Add custom theme's directory
-fpath=("$ZDOTDIR/.zprompts" $fpath)
+fpath+=$HOME/.config/zsh/.zfunc
+fpath+=$ZDOTDIR/.zprompts
 
 # Enable prompt theme system
 autoload -Uz promptinit
