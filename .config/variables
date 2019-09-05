@@ -1,5 +1,6 @@
 # Some basic quality of life
 export EDITOR=nvim
+export BROWSER=firefox
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # How the song is displayed in polybar
