@@ -17,7 +17,7 @@ export GPG_TTY=$(tty)
 export PYTHONDONTWRITEBYTECODE=1
 
 # FZF settings
-export FD_OPTIONS=(--hidden --follow -E ".git" -E ".cache" -E "__pycache__" -E "site-packages" -E "node_modules" -E ".mozilla" -E ".vscode-oss/extensions" -E ".vim/plugged" -E ".local" -E ".password-store" -E ".thunderbird" -E "Code\ -\ OSS" -E ".thumbnails")
+export FD_OPTIONS=(--hidden --follow -E ".git" -E ".cache" -E "__pycache__" -E "site-packages" -E "node_modules" -E ".mozilla" -E ".vscode-oss/extensions" -E ".vim/plugged" -E ".local" -E ".password-store" -E ".thunderbird" -E "Code\ -\ OSS" -E ".thumbnails" -E ".gem")
 export FZF_DEFAULT_COMMAND="fd ${FD_OPTIONS[@]}"
 export FZF_DEFAULT_OPTS="--border --no-mouse --height 50% --preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -500' --bind='f2:toggle-preview,ctrl-d:preview-page-down,ctrl-u:preview-page-up'"
 export FZF_ALT_C_COMMAND="fd --type d ${FD_OPTIONS[@]}"
