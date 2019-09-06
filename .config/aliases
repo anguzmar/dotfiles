@@ -19,6 +19,7 @@ alias tree='tree -C'
 alias mirrors-update='sudo /usr/bin/reflector --protocol https --latest 15 --sort rate --save /etc/pacman.d/mirrorlist'
 alias cv-update='mv ~/downloads/CV.pdf ~/documents/cv/CV.pdf && zathura ~/documents/cv/CV.pdf'
 alias orphans-remove='sudo pacman -Rns $(pacman -Qtdq)'
+alias mutt='neomutt'
 
 # Important aliases
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
