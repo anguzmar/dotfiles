@@ -11,4 +11,4 @@ imap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 nmap <c-l> [s1z=<c-o>
 
 " Textwidth
-setlocal textwidth = 100
+setlocal textwidth=100
