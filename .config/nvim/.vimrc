@@ -155,8 +155,9 @@ set langmap=ñ`
 set textwidth=100
 au FileType * set fo-=o fo-=r  " o and r = auto insert comment leader on normal mode and insert mode respectively
 
-" Enfore syntax hilight for certain extensions
+" Enforce syntax/filetype for certain extensions
 au BufNewFile,BufRead *.muttrc setlocal syntax=neomuttrc
+au BufNewFile,BufRead *.mail setlocal filetype=mail
 
 " Python paths
 let g:python3_host_prog = '/usr/bin/python'
