@@ -1,10 +1,10 @@
 " By default, english spell checking
 setlocal spell spelllang=en_us
-setlocal spellfile=$HOME/.vim/spell/words_en.utf-8.add
+setlocal spellfile=$HOME/.vim/spell/words-english.utf-8.add
 
 " Change spelllang
-nnoremap <buffer> <silent> <Leader>es :setlocal spelllang=es <BAR> :setlocal spellfile=$HOME/.vim/spell/words_es.utf-8.add<ENTER>
-nnoremap <buffer> <silent> <Leader>en :setlocal spelllang=en_us <BAR> :setlocal spellfile=$HOME/.vim/spell/words_en.utf-8.add<ENTER>
+nnoremap <buffer> <silent> <Leader>es :setlocal spelllang=es <BAR> :setlocal spellfile=$HOME/.vim/spell/words-spanish.utf-8.add<ENTER>
+nnoremap <buffer> <silent> <Leader>en :setlocal spelllang=en_us <BAR> :setlocal spellfile=$HOME/.vim/spell/words-english.utf-8.add<ENTER>
 
 " Useful binds
 imap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
