@@ -158,6 +158,7 @@ au FileType * set fo-=o fo-=r  " o and r = auto insert comment leader on normal 
 " Enforce syntax/filetype for certain extensions
 au BufNewFile,BufRead *.muttrc setlocal syntax=neomuttrc
 au BufNewFile,BufRead *.mail setlocal filetype=mail
+au BufNewFile,BufRead *.gdb setlocal filetype=gdb
 
 " Python paths
 let g:python3_host_prog = '/usr/bin/python'
