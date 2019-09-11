@@ -42,7 +42,7 @@ set hidden  " Set buffers to hidden. Allows to change buffers without having to 
 nmap <C-c> <Plug>CommentaryLine
 
 " Paste the latest yank
-nnoremap <C-y> "0p
+nnoremap <Leader>p "0p
 
 " Copy the entire file to the clipboard
 nnoremap <silent> <Leader>c :%y+<ENTER>
