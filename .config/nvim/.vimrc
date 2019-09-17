@@ -26,6 +26,14 @@ endif
 call plug#end()
 
 
+" Color scheme. It is important to load it first
+hi Normal ctermbg=None
+hi Folded ctermbg=60 ctermfg=2
+hi LineNr ctermfg=255
+hi CursorLineNr ctermfg=255
+hi Visual cterm=bold ctermbg=White ctermfg=Black
+
+
 " ***************************************************************************** "
 " 							PLUGIN SETTINGS 									"
 
@@ -123,14 +131,6 @@ set background=dark
 set shiftwidth=4
 set tabstop=4
 set scrolloff=1
-
-" Color scheme
-color evening
-hi Normal ctermbg=None
-hi Folded ctermbg=60 ctermfg=2
-hi LineNr ctermfg=255
-hi CursorLineNr ctermfg=255
-hi Visual cterm=bold ctermbg=White ctermfg=Black
 
 " Split settings
 set splitbelow
