@@ -26,13 +26,6 @@ endif
 call plug#end()
 
 
-" Color scheme. It is important to load it first
-hi Normal ctermbg=None
-hi Folded ctermbg=60 ctermfg=2
-hi LineNr ctermfg=255
-hi CursorLineNr ctermfg=255
-hi Visual cterm=bold ctermbg=White ctermfg=Black
-
 
 " ***************************************************************************** "
 " 							PLUGIN SETTINGS 									"
@@ -44,8 +37,6 @@ let g:black_linelength = 100
 let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option('max_list', 20)
 call deoplete#custom#source('_', 'matchers', ['matcher_head'])
-hi Pmenu ctermbg=White ctermfg=Black
-hi PmenuSel ctermbg=Magenta ctermfg=White
 
 " Autopair
 let g:AutoPairsShortcutToggle = '<M-a>'
@@ -175,3 +166,13 @@ au BufNewFile,BufRead *.gdb setlocal filetype=gdb
 " Python paths
 let g:python3_host_prog = '/usr/bin/python'
 let g:python2_host_prog = '/usr/bin/python2'
+
+" Color scheme. 
+color delek
+hi Normal ctermbg=None
+hi Folded ctermbg=60 ctermfg=2
+hi LineNr ctermfg=255
+hi CursorLineNr ctermfg=255
+hi Visual cterm=bold ctermbg=White ctermfg=Black
+hi Pmenu ctermbg=White ctermfg=Black
+hi PmenuSel ctermbg=Magenta ctermfg=White
