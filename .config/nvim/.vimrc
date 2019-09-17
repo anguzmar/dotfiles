@@ -6,7 +6,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }  					" Visualize directory within VIM
 Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }  				" Add icons for nerdtree according to the filetype
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on':  'NERDTreeToggle' }
-Plug 'ctrlpvim/ctrlp.vim'  													" Fuzzy file finder
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' } 							" Better folding for Python
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }  					" Better automatic indentation for Python multiple line command
 Plug 'jiangmiao/auto-pairs'  												" Automatically generate matching pair for brackets and quotes
@@ -17,6 +16,8 @@ Plug 'tpope/vim-ragtag'  													" Rad plugin for HTML tags
 Plug 'vim-python/python-syntax', { 'for': 'python' }  						" Enhanced Python syntax (yield, f-strings, etc.)
 Plug 'tpope/vim-fugitive'  													" Git wrapper
 Plug 'tpope/vim-repeat'  													" Repeat 'some' Plugin commands with '.'
+Plug 'junegunn/fzf.vim' 													" FZF for vim
+
 
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  				" Autocompletion engine
@@ -60,10 +61,6 @@ nnoremap <silent> <C-n> :NERDTreeToggle<ENTER>
 " Devicons
 let g:WebDevIconsUnicodeDecorateFolderNodes = 0
 
-" ctrlP
-let g:ctrlp_match_current_file = 0
-let g:ctrlp_mruf_max = 50
-
 " netrw
 let g:netrw_banner = 0
 
@@ -73,6 +70,11 @@ nmap <C-c> <Plug>CommentaryLine
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_min_count = 2
+
+" FZF
+let g:fzf_layout = { 'down': '~30%' }
+nmap <silent> <C-p> :Files<ENTER>
+
 
 " 							PLUGIN SETTINGS END 								"
 " ***************************************************************************** "
