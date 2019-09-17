@@ -72,7 +72,9 @@ let g:airline#extensions#tabline#buffer_min_count = 2
 
 " FZF
 let g:fzf_layout = { 'down': '~30%' }
-nmap <silent> <C-p> :Files<ENTER>
+nnoremap <silent> <Leader>sf :Files<ENTER>
+nnoremap <silent> <Leader>sl :Lines<ENTER>
+nnoremap <silent> <Leader>sbl :BLines<ENTER>
 
 
 " 							PLUGIN SETTINGS END 								"
@@ -167,7 +169,7 @@ au BufNewFile,BufRead *.gdb setlocal filetype=gdb
 let g:python3_host_prog = '/usr/bin/python'
 let g:python2_host_prog = '/usr/bin/python2'
 
-" Color scheme. 
+" Color scheme.
 color delek
 hi Normal ctermbg=None
 hi Folded ctermbg=60 ctermfg=2
