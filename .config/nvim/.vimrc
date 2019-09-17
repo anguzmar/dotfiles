@@ -24,62 +24,6 @@ Plug 'zchee/deoplete-jedi', { 'for': 'python' }  							" Autocompletion library
 endif
 call plug#end()
 
-" Clear search highlighting
-nnoremap <silent> <esc> :noh<return><esc>
-
-" Map leader key
-let mapleader = ","
-
-" Buffer navigation and stuff
-noremap <silent> <C-left> :bprev<ENTER>
-noremap <silent> <C-right> :bnext<ENTER>
-noremap <silent> <Leader>w :bdelete %<ENTER>
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_min_count = 2
-set hidden  " Set buffers to hidden. Allows to change buffers without having to save them
-
-" Toggle comments
-nmap <C-c> <Plug>CommentaryLine
-
-" Paste the latest yank
-nnoremap <Leader>p "0p
-
-" Copy the entire file to the clipboard
-nnoremap <silent> <Leader>c :%y+<ENTER>
-
-" Paste from clipboard
-nnoremap <Leader>v "+p
-
-" Hex editing
-nnoremap <Leader>h :%!xxd<ENTER>
-nnoremap <Leader>H :%!xxd -r<ENTER>
-
-" Remove trailing white spaces
-nnoremap <silent> <Leader>tr :%s/\s\+$//e <BAR> :noh<ENTER> <BAR> :w<ENTER>
-
-if has('nvim')
-tnoremap <Esc> <C-\><C-n>
-nnoremap <silent> <Leader>te :terminal<ENTER>
-endif
-
-" Useful stuff
-syntax enable
-set number
-set relativenumber
-set encoding=UTF-8
-set backupdir=$HOME/.config/vim_backup
-set background=dark
-set shiftwidth=4
-set tabstop=4
-set scrolloff=1
-
-" Color scheme
-color evening
-hi Normal ctermbg=None
-hi Folded ctermbg=60 ctermfg=2
-hi LineNr ctermfg=255
-hi CursorLineNr ctermfg=255
-hi Visual cterm=bold ctermbg=White ctermfg=Black
 
 " ***************************************************************************** "
 " 							PLUGIN SETTINGS 									"
@@ -123,10 +67,68 @@ let g:ctrlp_mruf_max = 50
 " netrw
 let g:netrw_banner = 0
 
+" Toggle comments
+nmap <C-c> <Plug>CommentaryLine
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_min_count = 2
 
 " 							PLUGIN SETTINGS END 								"
 " ***************************************************************************** "
 
+
+" Clear search highlighting
+nnoremap <silent> <esc> :noh<return><esc>
+
+" Map leader key
+let mapleader = ","
+
+" Buffer navigation and stuff
+noremap <silent> <C-left> :bprev<ENTER>
+noremap <silent> <C-right> :bnext<ENTER>
+noremap <silent> <Leader>w :bdelete %<ENTER>
+set hidden  " Set buffers to hidden. Allows to change buffers without having to save them
+
+" Paste the latest yank
+nnoremap <Leader>p "0p
+
+" Copy the entire file to the clipboard
+nnoremap <silent> <Leader>c :%y+<ENTER>
+
+" Paste from clipboard
+nnoremap <Leader>v "+p
+
+" Hex editing
+nnoremap <Leader>h :%!xxd<ENTER>
+nnoremap <Leader>H :%!xxd -r<ENTER>
+
+" Remove trailing white spaces
+nnoremap <silent> <Leader>tr :%s/\s\+$//e <BAR> :noh<ENTER> <BAR> :w<ENTER>
+
+if has('nvim')
+tnoremap <Esc> <C-\><C-n>
+nnoremap <silent> <Leader>te :terminal<ENTER>
+endif
+
+" Useful stuff
+syntax enable
+set number
+set relativenumber
+set encoding=UTF-8
+set backupdir=$HOME/.config/vim_backup
+set background=dark
+set shiftwidth=4
+set tabstop=4
+set scrolloff=1
+
+" Color scheme
+color evening
+hi Normal ctermbg=None
+hi Folded ctermbg=60 ctermfg=2
+hi LineNr ctermfg=255
+hi CursorLineNr ctermfg=255
+hi Visual cterm=bold ctermbg=White ctermfg=Black
 
 " Split settings
 set splitbelow
@@ -153,10 +155,10 @@ nnoremap <C-z> <C-W><C-z>
 " Change directory to match the file's
 autocmd BufEnter * silent! lcd %:p:h
 
-" Make sure it understands what .tex means
+" Make sure Vim understands what .tex means
 let g:tex_flavor='latex'
 
-" Fuck curly brackets in the spanish layout. Some custom keyboard mappings
+" Some custom keyboard mappings
 set langmap=ñ`
 
 " Format options.
