@@ -30,3 +30,7 @@ export MANPAGER="nvim -c 'set ft=man' -"
 # taskrc location
 export TASKRC="$HOME/.config/task/.taskrc"
 export TASKDATA="$HOME/.config/task/.task"
+
+# radare2
+export RCFILE="$HOME/.config/radare2/radare2rc"
+export RHOMEDIR="$HOME/.config/radare2/radare2"
