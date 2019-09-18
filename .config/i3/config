@@ -184,11 +184,9 @@ exec_always --no-startup-id feh --bg-scale ~/media/pictures/glados.jpg
 # Custom keybinds.
 bindsym $mod+Shift+x exec i3lock -e -i ~/media/pictures/lambda.png
 bindsym $mod+o exec --no-startup-id firefox
-bindsym $mod+c exec --no-startup-id code; workspace $ws3
 bindsym Print exec --no-startup-id flameshot gui
 bindsym $mod+Shift+S exec --no-startup-id systemctl suspend
 bindsym $mod+p exec alacritty -e python
-bindsym $mod+n exec --no-startup-id alacritty -e nnn
 
 # Assign workspaces.
 assign [class="Thunderbird"] $ws9
