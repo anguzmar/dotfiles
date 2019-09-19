@@ -2,3 +2,5 @@ eco darkda
 e scr.utf8 = true
 e scr.utf8.curvy = true
 e asm.describe = true
+e cfg.fortunes.type = tips
+e dbg.funcarg = true
