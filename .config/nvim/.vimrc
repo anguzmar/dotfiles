@@ -18,13 +18,15 @@ Plug 'tpope/vim-fugitive'  													" Git wrapper
 Plug 'tpope/vim-repeat'  													" Repeat 'some' Plugin commands with '.'
 Plug 'junegunn/fzf.vim' 													" FZF for vim
 
-
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  				" Autocompletion engine
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }  							" Autocompletion library for Python
 endif
 call plug#end()
 
+
+" Map leader key
+let mapleader = ","
 
 
 " ***************************************************************************** "
@@ -55,7 +57,7 @@ set ttimeoutlen=20
 " Nerdtree
 let NERDTreeNaturalSort=1
 let NERDTreeMinimalUI=1
-nnoremap <silent> <C-n> :NERDTreeToggle<ENTER>
+noremap <silent> <C-n> :NERDTreeToggle<ENTER>
 
 " Devicons
 let g:WebDevIconsUnicodeDecorateFolderNodes = 0
@@ -64,7 +66,7 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 0
 let g:netrw_banner = 0
 
 " Toggle comments
-nmap <C-c> <Plug>CommentaryLine
+map <C-c> <Plug>CommentaryLine
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -83,9 +85,6 @@ nnoremap <silent> <Leader>sbl :BLines<ENTER>
 
 " Clear search highlighting
 nnoremap <silent> <esc> :noh<return><esc>
-
-" Map leader key
-let mapleader = ","
 
 " Buffer navigation and stuff
 noremap <silent> <C-left> :bprev<ENTER>
