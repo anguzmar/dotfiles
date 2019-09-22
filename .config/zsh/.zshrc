@@ -14,7 +14,6 @@ compinit
 # End of lines added by compinstall
 ####################
 
-
 ####### THEME RELATED STUFF #######
 # Add custom theme's directory
 fpath+=$HOME/.config/zsh/.zfunc
@@ -33,23 +32,29 @@ setopt COMPLETE_ALIASES
 prompt minimalist
 ####################
 
+# Fish-like syntax highlight
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Extended globbing
 setopt extended_glob
 
-# Fish-like syntax highlight
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # FZF keybinds and autocompletion
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+zstyle ':completion:*' menu select
+
+# Navigate select menu
+bindkey -M menuselect '^h' vi-backward-char
+bindkey -M menuselect '^k' vi-up-line-or-history
+bindkey -M menuselect '^l' vi-forward-char
+bindkey -M menuselect '^j' vi-down-line-or-history
 
 # Find new executables in $PATH when using autocompletion
 zstyle ':completion:*' rehash true
 
 # Enable some useful commands in insert mode
-bindkey "^E" end-of-line
-bindkey "^A" beginning-of-line
+bindkey "^e" end-of-line
+bindkey "^a" beginning-of-line
 
 # Keybinds for the lazy
 bindkey -s '^o' 'dot status^M'
