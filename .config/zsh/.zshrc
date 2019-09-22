@@ -41,7 +41,8 @@ setopt extended_glob
 # FZF keybinds and autocompletion
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-zstyle ':completion:*' menu select
+zstyle ':completion:*' menu select=2  # Only start the menu if there are 2 ambiguous possibilities
+zmodload zsh/complist
 
 # Navigate select menu
 bindkey -M menuselect '^h' vi-backward-char
