@@ -17,10 +17,12 @@ Plug 'vim-python/python-syntax', { 'for': 'python' }  						" Enhanced Python sy
 Plug 'tpope/vim-fugitive'  													" Git wrapper
 Plug 'tpope/vim-repeat'  													" Repeat 'some' Plugin commands with '.'
 Plug 'junegunn/fzf.vim' 													" FZF for vim
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' } 					" Improved syntax and indentation for Javascript
 
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  				" Autocompletion engine
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }  							" Autocompletion library for Python
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }  							" Autocompletion source for Python
+Plug 'wokalski/autocomplete-flow', {'for': 'javascript'} 					" Autocompletion source for Javascript
 endif
 call plug#end()
 
@@ -31,6 +33,9 @@ let mapleader = ","
 
 " ***************************************************************************** "
 " 							PLUGIN SETTINGS 									"
+
+" Flow
+let g:autocomplete_flow#insert_paren_after_function = 0
 
 " Black
 let g:black_linelength = 100
