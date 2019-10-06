@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'  													" Used for tab completion
-Plug 'lervag/vimtex', { 'for': 'tex' }  									" LaTeX + VIM
+Plug 'lervag/vimtex', { 'for': 'tex' }  									" LaTeX + Vim
 Plug 'vim-airline/vim-airline'  											" A better statusline
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }  					" Visualize directory within VIM
@@ -18,6 +18,7 @@ Plug 'tpope/vim-fugitive'  													" Git wrapper
 Plug 'tpope/vim-repeat'  													" Repeat 'some' Plugin commands with '.'
 Plug 'junegunn/fzf.vim' 													" FZF for vim
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' } 					" Improved syntax and indentation for Javascript
+Plug 'dracula/vim', { 'as': 'dracula' } 									" Color scheme
 
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  				" Autocompletion engine
@@ -174,7 +175,7 @@ let g:python3_host_prog = '/usr/bin/python'
 let g:python2_host_prog = '/usr/bin/python2'
 
 " Color scheme.
-color delek
+color dracula
 hi Normal ctermbg=None
 hi Folded ctermbg=60 ctermfg=2
 hi LineNr ctermfg=255
