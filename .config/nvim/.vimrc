@@ -165,7 +165,6 @@ let g:tex_flavor='latex'
 set langmap=ñ`
 
 " Format options.
-set textwidth=100
 au FileType * set fo-=o fo-=r  " o and r = auto insert comment leader on normal mode and insert mode respectively
 
 " Enforce syntax/filetype for certain extensions

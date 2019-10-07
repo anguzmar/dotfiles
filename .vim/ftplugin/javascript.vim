@@ -8,7 +8,7 @@ setlocal softtabstop=2
 setlocal shiftwidth=2
 setlocal autoindent
 setlocal expandtab
-setlocal textwidth=100
+setlocal textwidth=99
 setlocal colorcolumn=+1
 highlight ColorColumn ctermbg=2
 
