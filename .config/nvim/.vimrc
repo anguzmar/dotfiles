@@ -92,6 +92,9 @@ nnoremap <silent> <Leader>sbl :BLines<ENTER>
 " Clear search highlighting
 nnoremap <silent> <esc> :noh<return><esc>
 
+" Search and replace
+nnoremap <Leader>r :%s/\<<C-r><C-a>\>/
+
 " Buffer navigation and stuff
 noremap <silent> <C-left> :bprev<ENTER>
 noremap <silent> <C-right> :bnext<ENTER>
