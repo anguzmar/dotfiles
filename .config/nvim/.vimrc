@@ -19,6 +19,7 @@ Plug 'tpope/vim-repeat'  													" Repeat 'some' Plugin commands with '.'
 Plug 'junegunn/fzf.vim' 													" FZF for vim
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' } 					" Improved syntax and indentation for Javascript
 Plug 'dracula/vim', { 'as': 'dracula' } 									" Color scheme
+Plug 'vimwiki/vimwiki' 														" Note-keeping
 
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  				" Autocompletion engine
@@ -84,6 +85,11 @@ nnoremap <silent> <Leader>sf :Files<ENTER>
 nnoremap <silent> <Leader>sl :Lines<ENTER>
 nnoremap <silent> <Leader>sbl :BLines<ENTER>
 
+" Vimwiki
+set nocompatible
+filetype plugin on
+let g:vimwiki_list = [{'path':'$HOME/documents/vimwiki', 'path_html':'$HOME/documents/vimwiki/html/',
+\ 'syntax': 'markdown', 'ext': '.md'}]
 
 " 							PLUGIN SETTINGS END 								"
 " ***************************************************************************** "
@@ -98,7 +104,7 @@ nnoremap <Leader>r :%s/\<<C-r><C-a>\>/
 " Buffer navigation and stuff
 noremap <silent> <C-left> :bprev<ENTER>
 noremap <silent> <C-right> :bnext<ENTER>
-noremap <silent> <Leader>w :bdelete %<ENTER>
+noremap <silent> <Leader>bd :bdelete %<ENTER>
 set hidden  " Set buffers to hidden. Allows to change buffers without having to save them
 
 " Paste the latest yank
