@@ -1,3 +1,6 @@
+# Path
+export PATH=$PATH:$HOME/.local/bin/
+
 # Some basic quality of life
 export EDITOR=nvim
 export BROWSER=firefox
