@@ -89,7 +89,7 @@ nnoremap <silent> <Leader>sbl :BLines<ENTER>
 set nocompatible
 filetype plugin on
 let g:vimwiki_list = [{'path':'$HOME/documents/vimwiki', 'path_html':'$HOME/documents/vimwiki/html/',
-\ 'syntax': 'markdown', 'ext': '.md'}]
+					\'syntax': 'markdown', 'ext': '.wiki'}]
 
 " 							PLUGIN SETTINGS END 								"
 " ***************************************************************************** "
@@ -112,9 +112,6 @@ nnoremap <Leader>p "0p
 
 " Copy the entire file to the clipboard
 nnoremap <silent> <Leader>c :%y+<ENTER>
-
-" Paste from clipboard
-nnoremap <Leader>v "+p
 
 " Hex editing
 nnoremap <Leader>h :%!xxd<ENTER>
