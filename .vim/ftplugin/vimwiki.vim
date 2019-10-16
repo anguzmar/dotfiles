@@ -10,3 +10,6 @@ setlocal expandtab
 setlocal textwidth=100
 setlocal colorcolumn=+1
 highlight ColorColumn ctermbg=2
+
+" Hide markdown format characters (currenly bugged on neovim).
+setlocal conceallevel=3
