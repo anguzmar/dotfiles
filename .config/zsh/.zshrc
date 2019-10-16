@@ -72,7 +72,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # Common command line stuff
 ZSH_HIGHLIGHT_STYLES[path]='fg=39'
 ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=39'
-ZSH_HIGHLIGHT_STYLES[alias]='fg=201'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=219'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=46'
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=196'
 ZSH_HIGHLIGHT_STYLES[arg0]='fg=69'
