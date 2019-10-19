@@ -126,9 +126,7 @@ assign [class="VirtualBox Manager"] $ws10
 assign [class="code"] $ws3
 
 # Execute stuff
-exec --no-startup-id compton
 exec --no-startup-id nm-applet
-exec --no-startup-id /usr/bin/dunst
 
 # Media keys
 bindsym XF86AudioPlay exec --no-startup-id mpc toggle

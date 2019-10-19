@@ -16,6 +16,8 @@ numlockx &
 unclutter &
 redshift &
 flameshot &
+dunst &
+compton &
 xss-lock -- i3lock -e -i /home/angel/media/pictures/lambda.png &
 
 exec i3
