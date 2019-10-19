@@ -53,16 +53,28 @@ call deoplete#custom#source('_', 'matchers', ['matcher_head'])
 " Autopair
 let g:AutoPairsShortcutToggle = '<M-a>'
 
-" Supertab
-let g:SuperTabClosePreviewOnPopupClose = 1
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-n>"
-
 " Vim airline
-let g:airline_theme='deus'
+let g:airline_theme='murmur'
 let g:airline_exclude_preview = 1
-let g:airline_section_c = "%{expand('%:p:h:t')}/%t"  " Get parent directory and filename.
-set ttimeoutlen=20
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_min_count = 2
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'  " Do not display unless it is NOT UTF-8
+let g:airline_inactive_collapse=1
+
+let g:airline_symbols = {}
+let g:airline_symbols.branch = ''
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.maxlinenr = ''
+
+let part1 = "%{expand('%:p:h:t')}/%t"                  " Parent directory/current directory
+let part2 = " %{airline#parts#readonly()}"             " Read-only flag
+call airline#parts#define_accent(part2, 'red')         " Color the read-only flag as red
+let keys = [part1,part2]                               " Define the parts to be included in the section
+let g:airline_section_c = airline#section#create(keys) " Create the section
+
+set ttimeoutlen=10 " Lower delay when chaging mode
+set noshowmode     " Hide the defaul way of showing what mode you are in
 
 " Nerdtree
 let NERDTreeNaturalSort=1
@@ -78,10 +90,6 @@ let g:netrw_banner = 0
 " Toggle comments
 map <C-c> <Plug>CommentaryLine
 
-" Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_min_count = 2
-
 " FZF
 let g:fzf_layout = { 'down': '~30%' }
 nnoremap <silent> <Leader>sf :Files<ENTER>
@@ -92,7 +100,7 @@ nnoremap <silent> <Leader>sbl :BLines<ENTER>
 set nocompatible
 filetype plugin on
 let g:vimwiki_list = [{'path':'$HOME/documents/vimwiki', 'path_html':'$HOME/documents/vimwiki/html/',
-					\'syntax': 'markdown', 'ext': '.wiki'}]
+            \'syntax': 'markdown', 'ext': '.wiki'}]
 
 " Easy align
 xmap <silent> ga <Plug>(EasyAlign)
