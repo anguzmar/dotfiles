@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-Plug 'ervandew/supertab'  													" Used for tab completion
+Plug 'ajh17/VimCompletesMe' 												" Tab completion
 Plug 'lervag/vimtex', { 'for': 'tex' }  									" LaTeX + Vim
 Plug 'vim-airline/vim-airline'  											" A better statusline
 Plug 'vim-airline/vim-airline-themes'
@@ -20,7 +20,10 @@ Plug 'junegunn/fzf.vim' 													" FZF for vim
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' } 					" Improved syntax and indentation for Javascript
 Plug 'dracula/vim', { 'as': 'dracula' } 									" Color scheme
 Plug 'vimwiki/vimwiki' 														" Note-keeping
+Plug 'junegunn/vim-easy-align' 												" Pretty alignment
+Plug 'machakann/vim-highlightedyank' 										" Highlight yanked selection
 
+" Neovim-only plugins
 if has('nvim')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  				" Autocompletion engine
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }  							" Autocompletion source for Python
@@ -91,21 +94,46 @@ filetype plugin on
 let g:vimwiki_list = [{'path':'$HOME/documents/vimwiki', 'path_html':'$HOME/documents/vimwiki/html/',
 					\'syntax': 'markdown', 'ext': '.wiki'}]
 
+" Easy align
+xmap <silent> ga <Plug>(EasyAlign)
+nmap <silent> ga <Plug>(EasyAlign)
+
 " 							PLUGIN SETTINGS END 								"
 " ***************************************************************************** "
 
 
+" Useful settings
+syntax enable                          " Syntax highlighting
+set number                             " Show line numbers
+set relativenumber                     " Show relative line numbers
+set encoding=UTF-8                     " Sane encoding
+set backupdir=$HOME/.config/vim_backup " Move the backup directory out of the $HOME folder
+set splitbelow                         " Split below by default
+set splitright                         " Split to the right by default
+set langmap=ñ`                         " Useful keyboard layout changes
+set inccommand=split                   " Interactive search and replace
+set listchars=tab:▸\ ,eol:¬            " Prettier hidden chars
+set hidden                             " Allows to change buffers without having to save them
+
+" Global tab settings
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set expandtab
+
+" Neovim-only settings
+if has('nvim')
+tnoremap <Esc> <C-\><C-n>
+nnoremap <silent> <Leader>te :terminal<ENTER>
+endif
+
 " Clear search highlighting
 nnoremap <silent> <esc> :noh<return><esc>
-
-" Search and replace
-nnoremap <Leader>r :%s/\<<C-r><C-a>\>/
 
 " Buffer navigation and stuff
 noremap <silent> <C-left> :bprev<ENTER>
 noremap <silent> <C-right> :bnext<ENTER>
 noremap <silent> <Leader>bd :bdelete %<ENTER>
-set hidden  " Set buffers to hidden. Allows to change buffers without having to save them
 
 " Paste the latest yank
 nnoremap <Leader>p "0p
@@ -119,26 +147,6 @@ nnoremap <Leader>H :%!xxd -r<ENTER>
 
 " Remove trailing white spaces
 nnoremap <silent> <Leader>tr :%s/\s\+$//e <BAR> :noh<ENTER> <BAR> :w<ENTER>
-
-if has('nvim')
-tnoremap <Esc> <C-\><C-n>
-nnoremap <silent> <Leader>te :terminal<ENTER>
-endif
-
-" Useful stuff
-syntax enable
-set number
-set relativenumber
-set encoding=UTF-8
-set backupdir=$HOME/.config/vim_backup
-set background=dark
-set shiftwidth=4
-set tabstop=4
-set scrolloff=1
-
-" Split settings
-set splitbelow
-set splitright
 
 " Split navigation
 nnoremap <C-J> <C-W><C-J>
@@ -161,12 +169,6 @@ nnoremap <C-z> <C-W><C-z>
 " Change directory to match the file's
 autocmd BufEnter * silent! lcd %:p:h
 
-" Make sure Vim understands what .tex means
-let g:tex_flavor='latex'
-
-" Some custom keyboard mappings
-set langmap=ñ`
-
 " Format options.
 au FileType * set fo-=o fo-=r  " o and r = auto insert comment leader on normal mode and insert mode respectively
 
@@ -175,11 +177,15 @@ au BufNewFile,BufRead *.muttrc setlocal syntax=neomuttrc
 au BufNewFile,BufRead *.mail setlocal filetype=mail
 au BufNewFile,BufRead *.gdb setlocal filetype=gdb
 
+" Make sure Vim understands what .tex means
+let g:tex_flavor='latex'
+
 " Python paths
 let g:python3_host_prog = '/usr/bin/python'
 let g:python2_host_prog = '/usr/bin/python2'
 
 " Color scheme.
+set background=dark
 color dracula
 hi Normal ctermbg=None
 hi Folded ctermbg=60 ctermfg=2
