@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-Plug 'ajh17/VimCompletesMe' 												" Tab completion
+Plug 'ervandew/supertab' 												    " Tab completion
 Plug 'lervag/vimtex', { 'for': 'tex' }  									" LaTeX + Vim
 Plug 'vim-airline/vim-airline'  											" A better statusline
 Plug 'vim-airline/vim-airline-themes'
@@ -39,6 +39,11 @@ let mapleader = ","
 " ***************************************************************************** "
 " 							PLUGIN SETTINGS 									"
 
+" Supertab
+let g:SuperTabClosePreviewOnPopupClose = 1
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
+
 " Flow
 let g:autocomplete_flow#insert_paren_after_function = 0
 
@@ -54,7 +59,7 @@ call deoplete#custom#source('_', 'matchers', ['matcher_head'])
 let g:AutoPairsShortcutToggle = '<M-a>'
 
 " Vim airline
-let g:airline_theme='murmur'
+let g:airline_theme='deus'
 let g:airline_exclude_preview = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_min_count = 2
