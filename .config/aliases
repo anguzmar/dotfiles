@@ -1,5 +1,5 @@
 # These were already defined before I got here
-alias ls='ls --color=auto'
+# alias ls='ls --color=auto'
 alias diff='diff --color=auto'
 
 # Aliases defined by me
@@ -24,3 +24,4 @@ alias orphans-remove='sudo pacman -Rns $(pacman -Qtdq)'
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias tmux='tmux -f $HOME/.config/.tmux.conf'
 alias vim='nvim'
+alias ls='exa'
