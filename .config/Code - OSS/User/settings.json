@@ -36,4 +36,5 @@
     "python.formatting.provider": "black",
     "python.linting.enabled": true,
     "python.formatting.blackPath": "/usr/bin/black",
+    "python.pythonPath": "/usr/bin/python",
 }
