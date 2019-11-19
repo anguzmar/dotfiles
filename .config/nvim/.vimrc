@@ -22,6 +22,7 @@ Plug 'dracula/vim', { 'as': 'dracula' } 									" Color scheme
 Plug 'vimwiki/vimwiki' 														" Note-keeping
 Plug 'junegunn/vim-easy-align' 												" Pretty alignment
 Plug 'machakann/vim-highlightedyank' 										" Highlight yanked selection
+Plug 'psliwka/vim-smoothie'                                                 " Smooth scrolling
 
 " Neovim-only plugins
 if has('nvim')
