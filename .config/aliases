@@ -1,6 +1,7 @@
-# These were already defined before I got here
-# alias ls='ls --color=auto'
+# Color all the things
+alias ls='ls --color=auto'
 alias diff='diff --color=auto'
+alias grep='grep --color=auto'
 
 # Aliases defined by me
 alias suspend='systemctl suspend'
