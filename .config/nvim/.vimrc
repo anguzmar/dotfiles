@@ -23,6 +23,7 @@ Plug 'vimwiki/vimwiki' 														" Note-keeping
 Plug 'junegunn/vim-easy-align' 												" Pretty alignment
 Plug 'machakann/vim-highlightedyank' 										" Highlight yanked selection
 Plug 'psliwka/vim-smoothie'                                                 " Smooth scrolling
+Plug 'PProvost/vim-ps1'                                                     " Powershell syntax hilighting
 
 " Neovim-only plugins
 if has('nvim')
