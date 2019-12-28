@@ -117,7 +117,7 @@ let wiki_2 = {}
 let wiki_2.path = '$HOME/ctf/wiki/'
 let wiki_2.path_html = '$HOME/ctf/wiki/html/'
 let wiki_2.syntax = 'markdown'
-let wiki_2.ext = '.wiki'
+let wiki_2.ext = '.md'
 
 let g:vimwiki_list = [wiki_1, wiki_2]
 
