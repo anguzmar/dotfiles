@@ -61,7 +61,7 @@ font-5 = "Font Awesome 5 Brands:pixelsize=12;1"
 
 modules-left = i3
 modules-center = mpd
-modules-right = filesystem xbacklight pulseaudio memory cpu battery temperature date
+modules-right = filesystem xbacklight backlight-acpi pulseaudio memory cpu battery temperature date
 
 
 tray-position = right
@@ -203,7 +203,7 @@ bar-empty-foreground = ${colors.foreground2}
 [module/backlight-acpi]
 inherit = module/xbacklight
 type = internal/backlight
-card = intel_backlight
+card = acpi_video0
 
 [module/cpu]
 type = internal/cpu
@@ -274,8 +274,6 @@ format-underline = #0a6cf5
 label = %date% %time%
 
 [module/pulseaudio]
-type = internal/pulseaudio
-
 format-volume = <label-volume>
 format-volume-underline = #18FF18
 format-muted-underline = ${self.format-volume-underline}
@@ -335,8 +333,8 @@ bar-volume-empty-foreground = ${colors.foreground2}
 
 [module/battery]
 type = internal/battery
-battery = BAT1
-adapter = ACAD
+battery = BAT0
+adapter = ADP0
 full-at = 98
 
 label-charging = %percentage%%
