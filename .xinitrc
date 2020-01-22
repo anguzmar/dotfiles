@@ -18,6 +18,10 @@ redshift &
 flameshot &
 dunst &
 picom &
-xss-lock -- i3lock -e -i /home/angel/media/pictures/lambda.png &
+xss-lock -- i3lock -e -i /home/angel/media/pictures/black_mesa.png &
+
+# Nvidia stuff
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
 
 exec i3

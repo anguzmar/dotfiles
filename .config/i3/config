@@ -113,7 +113,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale ~/media/pictures/glados.jpg
 
 # Custom keybinds
-bindsym $mod+Shift+x exec i3lock -e -i ~/media/pictures/lambda.png
+bindsym $mod+Shift+x exec i3lock -e -i ~/media/pictures/black_mesa.png
 bindsym $mod+o exec --no-startup-id firefox
 bindsym $mod+F12 exec --no-startup-id flameshot gui
 bindsym $mod+Shift+S exec --no-startup-id systemctl suspend
