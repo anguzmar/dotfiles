@@ -127,6 +127,17 @@ assign [class="code"] $ws3
 
 # Execute stuff
 exec --no-startup-id nm-applet
+exec --no-startup-id unclutter
+exec --no-startup-id redshift
+exec --no-startup-id flameshot
+exec --no-startup-id dunst
+exec --no-startup-id picom
+exec --no-startup-id numlockx
+exec --no-startup-id xss-lock -- i3lock -e -i /home/angel/media/pictures/black_mesa.png
+exec --no-startup-id xinput disable "MSFT0001:01 04F3:309E Touchpad"
+
+# Systemd timer does not persist after reboot. Workaround until fixed.
+exec --no-startup-id systemctl --user start battery.timer
 
 # Media keys
 bindsym XF86AudioPlay exec --no-startup-id mpc toggle
@@ -134,8 +145,6 @@ bindsym Ctrl+F10 exec --no-startup-id mpc stop
 bindsym Ctrl+F9 exec --no-startup-id mpc clear
 bindsym XF86AudioNext exec --no-startup-id mpc next
 bindsym XF86AudioPrev exec --no-startup-id mpc prev
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound

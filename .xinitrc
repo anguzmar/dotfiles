@@ -7,7 +7,7 @@
 eval $(ssh-agent)
 
 # Disable touchpad
-#xinput disable "SynPS/2 Synaptics TouchPad"
+#xinput disable "MSFT0001:01 04F3:309E Touchpad"
 
 # Activate Numlock on bootup
 numlockx &
