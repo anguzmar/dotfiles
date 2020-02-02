@@ -141,6 +141,7 @@ set langmap=ñ`                         " Useful keyboard layout changes
 set inccommand=split                   " Interactive search and replace
 set listchars=tab:▸\ ,eol:¬            " Prettier hidden chars
 set hidden                             " Allows to change buffers without having to save them
+set mouse=a                            " Allows resizing of windows with the mouse and some other cool stuff
 
 " Global tab settings
 set shiftwidth=4
