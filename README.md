@@ -7,9 +7,10 @@ $ git clone --separate-git-dir=$HOME/.dotfiles https://github.com/anguzmar/dotfi
 
 ### If your home directory is **NOT** empty
 ```shell
+$ mkdir $HOME/dotfiles-tmp
 $ git clone --separate-git-dir=$HOME/.dotfiles https://github.com/anguzmar/dotfiles $HOME/dotfiles-tmp
 $ shopt -s dotglob  # Allow globbing to expand hidden files 
-$ mv $HOME/dotfiles-tmp/* $HOME
+$ cp -r $HOME/dotfiles-tmp/* $HOME
 $ shopt -u dotglob
 $ rm -r $HOME/dotfiles-tmp/
 ```
