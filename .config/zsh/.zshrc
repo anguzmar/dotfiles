@@ -32,6 +32,10 @@ setopt COMPLETE_ALIASES
 prompt minimalist
 ####################
 
+# Fix history issues between panes when using tmux
+setopt inc_append_history
+setopt share_history
+
 # Fish-like syntax highlight
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
