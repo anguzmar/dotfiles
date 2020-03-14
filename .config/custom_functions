@@ -1,27 +1,32 @@
 # Functions.
 xev-arch () {
-	xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+    xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 }
 
 packages () {
-	pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h
+    pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h
 }
 
 music_update (){
-	youtube-dl -o "~/media/music/$1/%(title)s.%(ext)s" --download-archive ~/media/music/$1/archive.txt "https://www.youtube.com/watch?v=TiVIFMbwxOc&list=PLDM507H18AINDSH_VtvW8HgCoLY9MEDjA"
+    if [ -z "$1" ]; then
+        echo "[+] Updating Main playlist."
+        youtube-dl -o "~/hard_drive/media/music/main/%(title)s.%(ext)s" --download-archive ~/hard_drive/media/music/main/archive.txt "https://www.youtube.com/playlist?list=PLDM507H18AIPZgxkmsaPBSiopZ_vntjhM"
+    else
+        echo "[+] Updating workout playlist."
+        youtube-dl -o "~/hard_drive/media/music/workout/%(title)s.%(ext)s" --download-archive ~/hard_drive/media/music/workout/archive.txt "https://www.youtube.com/playlist?list=PLDM507H18AINDSH_VtvW8HgCoLY9MEDjA"
+    fi
 }
 
 pvenv () {
-	/usr/bin/python -m venv $1 && source $1/bin/activate
+    /usr/bin/python -m venv $1 && source $1/bin/activate
 }
-
 
 # FZF settings. Make the ** completion use "fd".
 _fzf_compgen_path() {
-	fd ${FD_OPTIONS[@]} . "$1"
+    fd ${FD_OPTIONS[@]} . "$1"
 }
 
 # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
-	fd --type d ${FD_OPTIONS[@]} . "$1"
+    fd --type d ${FD_OPTIONS[@]} . "$1"
 }

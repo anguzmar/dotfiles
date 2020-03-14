@@ -110,7 +110,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Display background
-exec_always --no-startup-id feh --bg-scale ~/media/pictures/glados.jpg
+exec_always --no-startup-id feh --bg-scale ~/media/pictures/city_dusk.jpg
 
 # Custom keybinds
 bindsym $mod+Shift+x exec i3lock -e -i ~/media/pictures/black_mesa.png
