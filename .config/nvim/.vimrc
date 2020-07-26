@@ -120,7 +120,7 @@ nmap <silent> ga <Plug>(EasyAlign)
 
 " Coc
 " Separate file: /home/angel/.config/nvim/plug-config/coc.vim
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-python', 'coc-vimlsp']
+let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-vimlsp']
 
 
 " 							PLUGIN SETTINGS END 								"
