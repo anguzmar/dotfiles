@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-Plug 'ervandew/supertab' 												    " Tab completion
+" Plug 'ervandew/supertab' 												    " Tab completion
 Plug 'lervag/vimtex', { 'for': 'tex' }  									" LaTeX + Vim
 Plug 'vim-airline/vim-airline'  											" A better statusline
 Plug 'vim-airline/vim-airline-themes'
@@ -10,7 +10,7 @@ Plug 'tmhedberg/SimpylFold', { 'for': 'python' } 							" Better folding for Pyt
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }  					" Better automatic indentation for Python multiple line command
 Plug 'jiangmiao/auto-pairs'  												" Automatically generate matching pair for brackets and quotes
 Plug 'tpope/vim-commentary'  												" Easy comment toggling
-Plug 'psf/black', { 'for': 'python' }  										" A godsend. Autoformatter for Python
+Plug 'psf/black', { 'for': 'python', 'branch' : 'stable' }  				" A godsend. Autoformatter for Python
 Plug 'tpope/vim-surround'  													" Add, remove or change pairs of brackets/quotes easily
 Plug 'tpope/vim-ragtag'  													" Rad plugin for HTML tags
 Plug 'vim-python/python-syntax', { 'for': 'python' }  						" Enhanced Python syntax (yield, f-strings, etc.)
@@ -24,12 +24,10 @@ Plug 'junegunn/vim-easy-align' 												" Pretty alignment
 Plug 'machakann/vim-highlightedyank' 										" Highlight yanked selection
 Plug 'psliwka/vim-smoothie'                                                 " Smooth scrolling
 Plug 'PProvost/vim-ps1'                                                     " Powershell syntax hilighting
+Plug 'neoclide/coc.nvim', {'branch': 'release'}                             " YEP COC - Autocompletion with Language Service Provider (LSP)
 
 " Neovim-only plugins
 if has('nvim')
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  				" Autocompletion engine
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }  							" Autocompletion source for Python
-Plug 'wokalski/autocomplete-flow', {'for': 'javascript'} 					" Autocompletion source for Javascript
 endif
 call plug#end()
 
@@ -42,20 +40,15 @@ let mapleader = ","
 " 							PLUGIN SETTINGS 									"
 
 " Supertab
-let g:SuperTabClosePreviewOnPopupClose = 1
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-n>"
+" let g:SuperTabClosePreviewOnPopupClose = 1
+" let g:SuperTabDefaultCompletionType = 'context'
+" let g:SuperTabContextDefaultCompletionType = '<c-n>'
 
 " Flow
 let g:autocomplete_flow#insert_paren_after_function = 0
 
 " Black
 let g:black_linelength = 100
-
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('max_list', 20)
-call deoplete#custom#source('_', 'matchers', ['matcher_head'])
 
 " Autopair
 let g:AutoPairsShortcutToggle = '<M-a>'
@@ -108,14 +101,14 @@ set nocompatible
 filetype plugin on
 
 let wiki_1 = {}
-let wiki_1.path = '$HOME/documents/vimwiki/'
-let wiki_1.path_html = '$HOME/documents/vimwiki/html/'
+let wiki_1.path = '$HOME/pwk/wiki/'
+let wiki_1.path_html = '$HOME/pwk/wiki/html/'
 let wiki_1.syntax = 'markdown'
-let wiki_1.ext = '.wiki'
+let wiki_1.ext = '.md'
 
 let wiki_2 = {}
-let wiki_2.path = '$HOME/ctf/wiki/'
-let wiki_2.path_html = '$HOME/ctf/wiki/html/'
+let wiki_2.path = '$HOME/wiki/'
+let wiki_2.path_html = '$HOME/wiki/html/'
 let wiki_2.syntax = 'markdown'
 let wiki_2.ext = '.md'
 
@@ -124,6 +117,11 @@ let g:vimwiki_list = [wiki_1, wiki_2]
 " Easy align
 xmap <silent> ga <Plug>(EasyAlign)
 nmap <silent> ga <Plug>(EasyAlign)
+
+" Coc
+" Separate file: /home/angel/.config/nvim/plug-config/coc.vim
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-python', 'coc-vimlsp']
+
 
 " 							PLUGIN SETTINGS END 								"
 " ***************************************************************************** "
