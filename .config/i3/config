@@ -110,11 +110,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Display background
-<<<<<<< HEAD
 exec_always --no-startup-id feh --bg-scale ~/hard_drive/media/pictures/city_dusk.jpg
-=======
-exec_always --no-startup-id feh --bg-scale ~/media/pictures/comet.png
->>>>>>> 75a0b42ff21162392fabffc19725dedceb6f00e4
 
 # Custom keybinds
 bindsym $mod+Shift+x exec i3lock -e -i ~/hard_drive/media/pictures/black_mesa.png
@@ -126,7 +122,6 @@ bindsym $mod+p exec alacritty -e python
 # Assign workspaces
 assign [class="code"] $ws3
 
-<<<<<<< HEAD
 # Execute stuff
 exec --no-startup-id nm-applet
 exec --no-startup-id mpd
@@ -142,8 +137,6 @@ exec --no-startup-id xinput disable "MSFT0001:01 04F3:309E Touchpad"
 # Systemd timer does not persist after reboot. Workaround until fixed.
 exec --no-startup-id systemctl --user start battery.timer
 
-=======
->>>>>>> 75a0b42ff21162392fabffc19725dedceb6f00e4
 # Media keys
 bindsym XF86AudioPlay exec --no-startup-id mpc toggle
 bindsym Ctrl+F10 exec --no-startup-id mpc stop
