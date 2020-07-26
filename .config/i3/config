@@ -110,10 +110,10 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Display background
-exec_always --no-startup-id feh --bg-scale ~/media/pictures/city_dusk.jpg
+exec_always --no-startup-id feh --bg-scale ~/hard_drive/media/pictures/city_dusk.jpg
 
 # Custom keybinds
-bindsym $mod+Shift+x exec i3lock -e -i ~/media/pictures/black_mesa.png
+bindsym $mod+Shift+x exec i3lock -e -i ~/hard_drive/media/pictures/black_mesa.png
 bindsym $mod+o exec --no-startup-id firefox
 bindsym $mod+Print exec --no-startup-id flameshot gui
 bindsym $mod+Shift+S exec --no-startup-id systemctl suspend
@@ -127,13 +127,14 @@ assign [class="code"] $ws3
 
 # Execute stuff
 exec --no-startup-id nm-applet
+exec --no-startup-id mpd
 exec --no-startup-id unclutter
 exec --no-startup-id redshift
 exec --no-startup-id flameshot
 exec --no-startup-id dunst
 exec --no-startup-id picom
 exec --no-startup-id numlockx
-exec --no-startup-id xss-lock -- i3lock -e -i /home/angel/media/pictures/black_mesa.png
+exec --no-startup-id xss-lock -- i3lock -e -i /home/angel/hard_drive/media/pictures/black_mesa.png
 exec --no-startup-id xinput disable "MSFT0001:01 04F3:309E Touchpad"
 
 # Systemd timer does not persist after reboot. Workaround until fixed.
