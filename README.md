@@ -2,7 +2,7 @@
 
 ### If your home directory is empty
 ```shell
-$ git clone --separate-git-dir=$HOME/.dotfiles https://github.com/anguzmar/dotfiles $HOME
+git clone --separate-git-dir=$HOME/.dotfiles https://github.com/anguzmar/dotfiles $HOME
 ```
 
 ### If your home directory is **NOT** empty
