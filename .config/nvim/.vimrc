@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-" Plug 'ervandew/supertab' 												    " Tab completion
 Plug 'lervag/vimtex', { 'for': 'tex' }  									" LaTeX + Vim
 Plug 'vim-airline/vim-airline'  											" A better statusline
 Plug 'vim-airline/vim-airline-themes'
@@ -38,11 +37,6 @@ let mapleader = ","
 
 " ***************************************************************************** "
 " 							PLUGIN SETTINGS 									"
-
-" Supertab
-" let g:SuperTabClosePreviewOnPopupClose = 1
-" let g:SuperTabDefaultCompletionType = 'context'
-" let g:SuperTabContextDefaultCompletionType = '<c-n>'
 
 " Flow
 let g:autocomplete_flow#insert_paren_after_function = 0
@@ -91,10 +85,13 @@ let g:netrw_banner = 0
 map <C-c> <Plug>CommentaryLine
 
 " FZF
-let g:fzf_layout = { 'down': '~30%' }
-nnoremap <silent> <Leader>sf :Files<ENTER>
-nnoremap <silent> <Leader>sl :Lines<ENTER>
-nnoremap <silent> <Leader>sbl :BLines<ENTER>
+nnoremap <silent> <Leader>ff :Files<ENTER>
+nnoremap <silent> <Leader>fl :Lines<ENTER>
+nnoremap <silent> <Leader>fbl :BLines<ENTER>
+nnoremap <silent> <Leader>fob :Buffers<ENTER>
+
+let g:fzf_layout = {'window':{'width':0.8, 'height':0.8}}
+let $FZF_DEFAULT_OPTS='--reverse'
 
 " Vimwiki
 set nocompatible
@@ -121,11 +118,6 @@ nmap <silent> ga <Plug>(EasyAlign)
 " Coc
 " Separate file: /home/angel/.config/nvim/plug-config/coc.vim
 let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-vimlsp']
-
-" FZF
-let g:fzf_layout = {'window':{'width':0.8, 'height':0.8}}
-
-
 
 " 							PLUGIN SETTINGS END 								"
 " ***************************************************************************** "
@@ -163,7 +155,10 @@ nnoremap <silent> <esc> :noh<return><esc>
 " Buffer navigation and stuff
 noremap <silent> <C-left> :bprev<ENTER>
 noremap <silent> <C-right> :bnext<ENTER>
-noremap <silent> <Leader>bd :bdelete %<ENTER>
+nnoremap <silent> <Leader>bd :bdelete %<ENTER>
+
+" Close all buffers but the current one
+nnoremap <silent> <Leader>bc :%bd\|e#\|bd#<ENTER>
 
 " Paste the latest yank
 nnoremap <Leader>p "0p
