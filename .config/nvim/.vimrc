@@ -73,8 +73,8 @@ call airline#parts#define_accent(part2, 'red')         " Color the read-only fla
 let keys = [part1,part2]                               " Define the parts to be included in the section
 let g:airline_section_c = airline#section#create(keys) " Create the section
 
-set ttimeoutlen=10 " Lower delay when chaging mode
-set noshowmode     " Hide the defaul way of showing what mode you are in
+set ttimeoutlen=10 " Lower delay when changing mode
+set noshowmode     " Hide the default way of showing what mode you are in
 
 " Nerdtree
 let NERDTreeNaturalSort=1
@@ -121,6 +121,10 @@ nmap <silent> ga <Plug>(EasyAlign)
 " Coc
 " Separate file: /home/angel/.config/nvim/plug-config/coc.vim
 let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-vimlsp']
+
+" FZF
+let g:fzf_layout = {'window':{'width':0.8, 'height':0.8}}
+
 
 
 " 							PLUGIN SETTINGS END 								"
