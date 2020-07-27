@@ -1,8 +1,8 @@
 ####################
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.config/zsh/histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=$HISTSIZE
 setopt appendhistory autocd
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -31,6 +31,9 @@ setopt COMPLETE_ALIASES
 # Select theme
 prompt minimalist
 ####################
+
+# Remove duplicates from historu
+setopt hist_ignore_all_dups
 
 # Fix history issues between panes when using tmux
 setopt inc_append_history

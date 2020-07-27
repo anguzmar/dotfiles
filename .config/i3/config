@@ -121,6 +121,7 @@ bindsym $mod+p exec alacritty -e python
 
 # Assign workspaces
 assign [class="code"] $ws3
+assign [class="VirtualBox Manager"] $ws10
 
 # Execute stuff
 exec --no-startup-id nm-applet
