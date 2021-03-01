@@ -7,13 +7,20 @@ packages () {
     pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h
 }
 
+# Todo refactor, make it take the name of the folder as argument
 music_update (){
-    if [ -z "$1" ]; then
-        echo "[+] Updating Main playlist."
-        youtube-dl -o "~/hard_drive/media/music/main/%(title)s.%(ext)s" --download-archive ~/hard_drive/media/music/main/archive.txt "https://www.youtube.com/playlist?list=PLDM507H18AIPZgxkmsaPBSiopZ_vntjhM"
-    else
-        echo "[+] Updating workout playlist."
-        youtube-dl -o "~/hard_drive/media/music/workout/%(title)s.%(ext)s" --download-archive ~/hard_drive/media/music/workout/archive.txt "https://www.youtube.com/playlist?list=PLDM507H18AINDSH_VtvW8HgCoLY9MEDjA"
+    [ -d "$HOME/hard_drive/media/music/$1" ] || (echo "[!] Folder \"$1\" does not exist"; return 1)
+
+    if [ $1 = "main" ]; then
+        echo "[+] Updating $1 playlist."
+        youtube-dl -o "$HOME/hard_drive/media/music/main/%(title)s.%(ext)s" --download-archive ~/hard_drive/media/music/main/archive.txt "https://www.youtube.com/playlist?list=PLDM507H18AIPZgxkmsaPBSiopZ_vntjhM"
+    elif [ $1 = "games" ]; then
+        echo "[+] Updating $1 playlist."
+        youtube-dl -o "$HOME/hard_drive/media/music/games/%(title)s.%(ext)s" --download-archive ~/hard_drive/media/music/games/archive.txt "https://www.youtube.com/playlist?list=PLDM507H18AIMpZBuun2vsEwu7EL_dtsYL"
+    
+    elif [ $1 = "workout" ]; then
+        echo "[+] Updating $1 playlist."
+        youtube-dl -o "$HOME/hard_drive/media/music/workout/%(title)s.%(ext)s" --download-archive ~/hard_drive/media/music/workout/archive.txt "https://www.youtube.com/playlist?list=PLDM507H18AINDSH_VtvW8HgCoLY9MEDjA"
     fi
 }
 

@@ -130,7 +130,7 @@ exec --no-startup-id unclutter
 exec --no-startup-id redshift
 exec --no-startup-id flameshot
 exec --no-startup-id dunst
-exec --no-startup-id picom
+# exec --no-startup-id picom
 exec --no-startup-id numlockx
 exec --no-startup-id xss-lock -- i3lock -e -i /home/angel/hard_drive/media/pictures/black_mesa.png
 exec --no-startup-id xinput disable "MSFT0001:01 04F3:309E Touchpad"
