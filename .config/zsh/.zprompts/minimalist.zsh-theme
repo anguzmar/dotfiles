@@ -16,14 +16,11 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 ##############################
 
-
 minimalist_get_prompt() {
-
 	echo -n "%F{15}%2~%f " # Dir
 	echo -n "${vcs_info_msg_0_}" # Git branch
 	echo -n "%B${vim_mode}%b%{$reset_color%} "
 }
-
 
 zstyle ':vcs_info:*' actionformats '%B%F{196}|%f%%b \uf126 %B%F{57}%u%b%c%f%%b '
 zstyle ':vcs_info:*' formats '%B%F{196}|%f%%b \uf126 %B%F{46}%u%b%c%f%%b '
