@@ -66,7 +66,7 @@ bindkey "^a" beginning-of-line
 
 # Keybinds for the lazy
 bindkey -s '^o' 'dot status^M'
-bindkey -s '^y' 'source $(fd -t f -p ".*/bin/activate$")^M'
+bindkey -s '^y' 'source $(fd -t f -p activate$ */bin)^M'
 
 
 ####### SYNTAX HIGHLIGHT COLORS #######

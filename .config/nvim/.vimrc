@@ -10,7 +10,7 @@ Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }  					" Better automati
 Plug 'jiangmiao/auto-pairs'  												" Automatically generate matching pair for brackets and quotes
 Plug 'tpope/vim-commentary'  												" Easy comment toggling
 " Plug 'psf/black', { 'for': 'python', 'branch' : 'stable' }  				" A godsend. Autoformatter for Python
-Plug 'psf/black', { 'for': 'python' } 
+Plug 'psf/black', { 'for': 'python' }
 Plug 'tpope/vim-surround'  													" Add, remove or change pairs of brackets/quotes easily
 Plug 'tpope/vim-ragtag'  													" Rad plugin for HTML tags
 Plug 'vim-python/python-syntax', { 'for': 'python' }  						" Enhanced Python syntax (yield, f-strings, etc.)

@@ -28,7 +28,7 @@ export FZF_ALT_C_COMMAND="fd --type d ${FD_OPTIONS[@]} . $HOME"
 export FZF_CTRL_T_COMMAND="fd ${FD_OPTIONS[@]} . $HOME"
 
 # Use Nvim as manpager
-export MANPAGER="nvim -c 'set ft=man' -"
+export MANPAGER='nvim +Man!'
 
 # taskrc location
 export TASKRC="$HOME/.config/task/.taskrc"
