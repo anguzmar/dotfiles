@@ -118,6 +118,7 @@ bindsym $mod+o exec --no-startup-id firefox
 bindsym $mod+Print exec --no-startup-id flameshot gui
 bindsym $mod+Shift+S exec --no-startup-id systemctl suspend
 bindsym $mod+p exec alacritty -e python
+bindsym Ctrl+space exec dunstctl close-all
 
 # Assign workspaces
 assign [class="code"] $ws3
