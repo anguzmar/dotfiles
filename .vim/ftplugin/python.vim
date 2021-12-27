@@ -4,7 +4,7 @@ nnoremap <buffer> <A-b> oimport pdb; pdb.set_trace()<ESC>
 nnoremap <buffer> <silent> <Leader>ru :vs <Bar> :terminal python %<ENTER>
 nnoremap <buffer> <Leader>f :!flake8 %<ENTER>
 nnoremap <buffer> <silent> <leader>b :Black<ENTER>
-nnoremap <buffer> <silent> <leader>i :!isort %<ENTER>
+nnoremap <buffer> <silent> <leader>i :Isort<ENTER>
 nnoremap <buffer> <silent> <leader>m :!mypy %<ENTER>
 nnoremap <buffer><silent> <leader>re :vs <BAR> :terminal ipython<ENTER> <BAR> :norm! A<ENTER>
 

@@ -17,6 +17,119 @@ music_update (){
     fi
 }
 
+# Set up environement for PWK Box
+pwk_box (){
+
+    # Test if the first argument is number
+    case $1 in
+        ''|*[!0-9]*)
+            echo "Input is not a number. Do not use the full ip address, only the last byte (in decimal)."
+            return 1
+            ;;
+        *) ;;
+    esac
+
+    # Check if the folder already exists
+    if [ -d ~/pwk/boxes/public_network/10.11.1.$1 ]; then
+        echo "The directory for 10.11.1.$1 already exists. Moving you there."
+        cd ~/pwk/boxes/public_network/10.11.1.$1
+        pwk_tmux 10_11_1_$1
+        return 2
+    fi
+
+    # Create folders
+    mkdir -p /home/angel/pwk/boxes/public_network/10.11.1.${1}/{nmap,shells,exploits,post_exploitation,enumeration}
+    mkdir /home/angel/pwk/wiki/images/images_10.11.1.$1
+    cd /home/angel/pwk/boxes/public_network/10.11.1.${1}/
+
+    # Create Wiki file
+    echo "# 10.11.1.$1" > ~/pwk/wiki/10_11_1_$1.md
+    echo "[10_11_1_$1](10_11_1_$1)" >> ~/pwk/wiki/Public\ Network.md
+
+    # Set up tmux
+    pwk_tmux 10_11_1_$1
+}
+
+# Set up TMUX environment for PWK
+pwk_tmux (){
+
+    # Test that $1 is set
+    if [ -z $1 ]; then
+        echo "Usage: $0 <session name>"
+        return 1
+    fi
+
+    tmux new -d -s $1
+    tmux rename-window 'wiki'
+    tmux send-keys "nvim -c 'VimwikiIndex' -c '/Public Network'" "C-m" ':call feedkeys("\<CR>G\<CR>")' "C-m"
+    tmux new-window
+    tmux select-window -t $1:2
+    tmux -2 attach-session -t $1
+}
+
+# Set up environement for HTB Box
+htb_box (){
+
+    # Test if the first argument is number
+    if [ -z $1 ]; then
+        echo "Usage: $0 <HTB Box name>"
+        return 1
+    fi
+
+    # Check if the folder already exists
+    if [ -d ~/htb/boxes/$1 ]; then
+        echo "The directory for $1 already exists. Moving you there."
+        cd ~/htb/boxes/$1
+        pwk_tmux $1
+        return 2
+    fi
+
+    # Create folders
+    mkdir -p /home/angel/htb/boxes/${1}/{nmap,shells,exploits,post_exploitation,enumeration}
+    mkdir /home/angel/wiki/images/boxes/images_$1
+    cd /home/angel/htb/boxes/${1}/
+
+    # Create Wiki file
+    echo "# $1" > ~/wiki/$1.md
+    echo "[$1]($1)" >> ~/wiki/Boxes.md
+
+    # Set up tmux
+    htb_tmux $1
+}
+
+# Set up TMUX environment for HTB
+htb_tmux (){
+
+    # Test that $1 is set
+    if [ -z $1 ]; then
+        echo "Usage: $0 <session name>"
+        return 1
+    fi
+
+    tmux new -d -s $1
+    tmux rename-window 'wiki'
+    tmux send-keys "nvim -c 'VimwikiIndex2' -c '/Boxes'" "C-m" ':call feedkeys("\<CR>G\<CR>")' "C-m"
+    tmux new-window
+    tmux select-window -t $1:2
+    tmux -2 attach-session -t $1
+}
+
+# Full TCP scan and partial UDP
+full_scan (){
+
+    # Usage
+    [ $# -eq 0 ] && { echo "Usage: $0 <ip_address>"; return 1; }
+
+    ip_address=$1
+
+    # Start with UDP because it requires sudo privileges
+    sudo nmap -Pn -T4 -n --top-ports 20 -o nmap/nmap_udp_top_20_ports.txt --min-rate 750 -sU -sV -sC --reason $ip_address
+    ports=$(nmap -p- --min-rate=750 -T4 -n -Pn $ip_address | grep "^[0-9]" | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
+    nmap -p $ports -sC -sV -oN nmap/nmap_initial.txt -Pn -n $ip_address
+    nmap --script vuln -p $ports -oN nmap/nmap_vuln.txt -Pn -n $ip_address
+}
+
+# Shortcut for python virtual environment
 pvenv () {
     /usr/bin/python -m venv $1 && source $1/bin/activate
 }
