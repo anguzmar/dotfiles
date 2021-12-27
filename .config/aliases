@@ -2,6 +2,7 @@
 alias ls='ls --color=auto'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
+alias ip='ip --color=auto'
 
 # Aliases defined by me
 alias suspend='systemctl suspend'
@@ -20,6 +21,12 @@ alias tree='tree -C'
 alias mirrors-update='sudo /usr/bin/reflector --protocol https --latest 15 --sort rate --save /etc/pacman.d/mirrorlist'
 alias cv-update='mv ~/downloads/CV.pdf ~/documents/cv/CV.pdf && zathura ~/documents/cv/CV.pdf'
 alias orphans-remove='sudo pacman -Rns $(pacman -Qtdq)'
+alias smbmap='smbmap --no-banner'
+alias msfconsole='msfconsole -q'
+alias pwk_handler='sudo msfconsole -q -x "use exploit/multi/handler; set payload windows/shell/reverse_tcp; set LHSOT 192.168.119.137; set LPORT 443"'
+alias proxychains='proxychains -q -f /etc/proxychains.conf'
+alias meterpreter_listener='sudo msfconsole -q -x "use exploit/multi/handler;set payload windows/x64/meterpreter/reverse_tcp; set lhost 10.10.14.10; set lport 443; set ExitOnSession false"'
+alias dir_size="du -sh * | sort -k 1 -h -r"
 
 # Important aliases
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
