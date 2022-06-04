@@ -26,6 +26,10 @@ music_update (){
     elif [ $1 = "workout" ]; then
         echo "[+] Updating $1 playlist."
         /usr/bin/yt-dlp --config-location $HOME/.config/yt-dlp/config -o "$HOME/hard_drive/media/music/workout/%(title)s.%(ext)s" --download-archive ~/hard_drive/media/music/workout/archive.txt "https://www.youtube.com/playlist?list=PLDM507H18AINDSH_VtvW8HgCoLY9MEDjA"
+
+    elif [ $1 = "high_bpm" ]; then
+        echo "[+] Updating $1 playlist."
+        /usr/bin/yt-dlp --config-location $HOME/.config/yt-dlp/config -o "$HOME/hard_drive/media/music/high_bpm/%(title)s.%(ext)s" --download-archive ~/hard_drive/media/music/high_bpm/archive.txt "https://www.youtube.com/playlist?list=PLDM507H18AIPC5pL2rQSkDTORLeD6QeJQ"
     fi
 }
 
