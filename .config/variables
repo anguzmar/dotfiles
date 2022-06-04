@@ -1,5 +1,6 @@
 # Path
 export PATH=$PATH:$HOME/.local/bin/
+export PATH=$PATH:/home/angel/.local/share/gem/ruby/3.0.0/bin
 
 # Some basic quality of life
 export EDITOR=nvim
@@ -37,3 +38,6 @@ export TASKDATA="$HOME/.config/task/.task"
 # radare2
 export RCFILE="$HOME/.config/radare2/radare2rc"
 export RHOMEDIR="$HOME/.config/radare2/radare2"
+
+# Tell Java to use Anti-Aliasing. Fixes Burp's fuzzy font.
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'

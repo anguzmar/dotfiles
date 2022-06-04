@@ -9,7 +9,6 @@ Plug 'tmhedberg/SimpylFold', { 'for': 'python' } 							" Better folding for Pyt
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }  					" Better automatic indentation for Python multiple line command
 Plug 'jiangmiao/auto-pairs'  												" Automatically generate matching pair for brackets and quotes
 Plug 'tpope/vim-commentary'  												" Easy comment toggling
-" Plug 'psf/black', { 'for': 'python', 'branch' : 'stable' }  				" A godsend. Autoformatter for Python
 Plug 'psf/black', { 'for': 'python' }
 Plug 'tpope/vim-surround'  													" Add, remove or change pairs of brackets/quotes easily
 Plug 'tpope/vim-ragtag'  													" Rad plugin for HTML tags
@@ -25,6 +24,8 @@ Plug 'machakann/vim-highlightedyank' 										" Highlight yanked selection
 Plug 'psliwka/vim-smoothie'                                                 " Smooth scrolling
 Plug 'PProvost/vim-ps1'                                                     " Powershell syntax hilighting
 Plug 'neoclide/coc.nvim', {'branch': 'release'}                             " YEP COC - Autocompletion with Language Service Provider (LSP)
+Plug 'fisadev/vim-isort'
+Plug 'ervandew/supertab'
 
 " Neovim-only plugins
 if has('nvim')
@@ -39,8 +40,9 @@ let mapleader = ","
 " ***************************************************************************** "
 " 							PLUGIN SETTINGS 									"
 
-" Flow
-let g:autocomplete_flow#insert_paren_after_function = 0
+" Supertab
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
 
 " Black
 let g:black_linelength = 100
@@ -99,8 +101,8 @@ set nocompatible
 filetype plugin on
 
 let wiki_1 = {}
-let wiki_1.path = '$HOME/pwk/wiki/'
-let wiki_1.path_html = '$HOME/pwk/wiki/html/'
+let wiki_1.path = '$HOME/offsec/pwk/wiki/'
+let wiki_1.path_html = '$HOME/offsec/pwk/wiki/html/'
 let wiki_1.syntax = 'markdown'
 let wiki_1.ext = '.md'
 
@@ -110,15 +112,25 @@ let wiki_2.path_html = '$HOME/wiki/html/'
 let wiki_2.syntax = 'markdown'
 let wiki_2.ext = '.md'
 
-let g:vimwiki_list = [wiki_1, wiki_2]
+let wiki_3 = {}
+let wiki_3.path = '$HOME/offsec/awae/wiki/'
+let wiki_3.path_html = '$HOME/offsec/awae/wiki/html/'
+let wiki_3.syntax = 'markdown'
+let wiki_3.ext = '.md'
+
+let g:vimwiki_list = [wiki_1, wiki_2, wiki_3]
 
 " Easy align
 xmap <silent> ga <Plug>(EasyAlign)
 nmap <silent> ga <Plug>(EasyAlign)
 
 " Coc
+<<<<<<< HEAD
 " Separate file: ~/.config/nvim/plug-config/coc.vim
 let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-vimlsp']
+=======
+let g:coc_global_extensions = ['coc-json', 'coc-jedi', 'coc-vimlsp']
+>>>>>>> 95fabfbdeabcc19dff9488f9bd1b297ef544bf9f
 
 " 							PLUGIN SETTINGS END 								"
 " ***************************************************************************** "
