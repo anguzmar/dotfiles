@@ -121,7 +121,7 @@ nmap <silent> ga <Plug>(EasyAlign)
 
 " Coc
 " Separate file: ~/.config/nvim/plug-config/coc.vim]
-source ~/.config/nvim/plug-config/coc.vim
+source ~/.config/nvim/coc.vim
 let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-vimlsp']
 
 " 							PLUGIN SETTINGS END 								"
