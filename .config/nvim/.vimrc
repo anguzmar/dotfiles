@@ -25,7 +25,6 @@ Plug 'psliwka/vim-smoothie'                                                 " Sm
 Plug 'PProvost/vim-ps1'                                                     " Powershell syntax hilighting
 Plug 'neoclide/coc.nvim', {'branch': 'release'}                             " YEP COC - Autocompletion with Language Service Provider (LSP)
 Plug 'fisadev/vim-isort'
-Plug 'ervandew/supertab'
 
 " Neovim-only plugins
 if has('nvim')
@@ -39,10 +38,6 @@ let mapleader = ","
 
 " ***************************************************************************** "
 " 							PLUGIN SETTINGS 									"
-
-" Supertab
-let g:SuperTabDefaultCompletionType = "<c-n>"
-
 
 " Black
 let g:black_linelength = 100
@@ -125,12 +120,9 @@ xmap <silent> ga <Plug>(EasyAlign)
 nmap <silent> ga <Plug>(EasyAlign)
 
 " Coc
-<<<<<<< HEAD
-" Separate file: ~/.config/nvim/plug-config/coc.vim
-let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-vimlsp']
-=======
-let g:coc_global_extensions = ['coc-json', 'coc-jedi', 'coc-vimlsp']
->>>>>>> 95fabfbdeabcc19dff9488f9bd1b297ef544bf9f
+" Separate file: ~/.config/nvim/plug-config/coc.vim]
+source ~/.config/nvim/plug-config/coc.vim
+let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-vimlsp']
 
 " 							PLUGIN SETTINGS END 								"
 " ***************************************************************************** "
