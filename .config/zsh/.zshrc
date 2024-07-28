@@ -107,3 +107,8 @@ fi
 if [ -f $HOME/.config/custom_functions ]; then
     source $HOME/.config/custom_functions
 fi
+
+# Load the environment variables
+if [ -f $HOME/.config/variables ]; then
+    source $HOME/.config/variables
+fi
