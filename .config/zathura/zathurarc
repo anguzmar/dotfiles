@@ -1,0 +1,13 @@
+# zoom and scroll step size
+set zoom-step 20
+set scroll-step 80
+
+# copy selection to system clipboard
+set selection-clipboard clipboard
+
+# zoom
+map <C-i> zoom in
+map <C-o> zoom out
+
+# enable incremental search
+set incremental-search true

@@ -1,0 +1,27 @@
+# Color all the things
+alias ls='ls --color=auto'
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip --color=auto'
+
+# Aliases defined by me
+alias suspend='systemctl suspend'
+alias headset-on='bluetoothctl power on; bluetoothctl connect 58:18:62:8B:5C:54'
+alias headset-off='bluetoothctl disconnect 58:18:62:8B:5C:54; bluetoothctl power off'
+alias weather='curl -s wttr.in | head -n -1'
+alias xclipC='xclip -selection clipboard'
+#alias ethernet='sudo systemctl start dhcpcd@eno1.service'
+#alias ethernet-dhcp='sudo systemctl start dhcpd4@eno1.service'
+alias gpg-show='gpg --list-secret-keys --keyid-format LONG'
+alias tree='tree -C'
+alias mirrors-update='sudo /usr/bin/reflector --protocol https --latest 15 --sort rate --save /etc/pacman.d/mirrorlist'
+alias cv-update='mv ~/downloads/CV.pdf ~/documents/cv/CV.pdf && zathura ~/documents/cv/CV.pdf'
+alias orphans-remove='sudo pacman -Rns $(pacman -Qtdq)'
+alias proxychains='proxychains -q -f /etc/proxychains.conf'
+alias dir_size="du -sh * | sort -k 1 -h -r"
+
+# Important aliases
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias tmux='tmux -f $HOME/.config/.tmux.conf'
+alias vim='nvim'
+alias ls='exa --git'
