@@ -214,7 +214,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require("mason").setup()
 
 require("mason-lspconfig").setup({
-  -- Automatically install these language servers
   ensure_installed = { "pyright", "jsonls", "vimls", "lua_ls"},
 })
 
