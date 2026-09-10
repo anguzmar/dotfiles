@@ -234,6 +234,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+-- Show diagnostic error/warning details in a floating window
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, { desc = 'Show line diagnostics' })
+
+-- Move between diagnostics
+vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1 }) end, { desc = 'Go to previous diagnostic' })
+vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1 }) end, { desc = 'Go to next diagnostic' })
+
+-- Send all diagnostics to the Quickfix list
+vim.keymap.set('n', '<space>q', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
+
 local servers = { 'pyright', 'jsonls', 'vimls' }
 
 for _, server in ipairs(servers) do
