@@ -19,6 +19,6 @@ unclutter &
 redshift &
 flameshot &
 dunst &
-xss-lock -- i3lock -e -i /home/angel/media/pictures/lambda.png &
+xss-lock -- i3lock -t -e -i /home/angel/media/pictures/lambda.png &
 
 exec /usr/bin/i3
