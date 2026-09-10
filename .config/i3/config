@@ -15,7 +15,6 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 
 # Program launcher
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
 
 # Change focus
@@ -121,7 +120,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale ~/media/pictures/house_wallpaper.png
 
 # Custom keybinds
-bindsym $mod+Shift+x exec i3lock -e -t -i ~/media/pictures/lambda.png
+bindsym $mod+Shift+x exec xset s activate
 bindsym $mod+o exec --no-startup-id firefox
 bindsym $mod+Print exec --no-startup-id flameshot gui
 bindsym $mod+Shift+S exec --no-startup-id systemctl suspend
@@ -133,13 +132,6 @@ assign [class="code"] $ws3
 assign [class="VirtualBox Manager"] $ws10
 
 # Execute stuff
-# exec --no-startup-id mpd
-# exec --no-startup-id unclutter
-# exec --no-startup-id redshift
-# exec --no-startup-id flameshot
-# exec --no-startup-id dunst
-# exec --no-startup-id picom
-exec --no-startup-id xrandr --output HDMI-A-1 --auto --left-of HDMI-A-0
 exec --no-startup-id nm-applet
 exec --no-startup-id numlockx
 
