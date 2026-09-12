@@ -3,8 +3,6 @@
 -- ============================================================================
 vim.pack.add({
   'https://github.com/lervag/vimtex',
-  'https://github.com/scrooloose/nerdtree',
-  'https://github.com/jiangmiao/auto-pairs',
   'https://github.com/tpope/vim-commentary',
   'https://github.com/tpope/vim-surround',
   'https://github.com/tpope/vim-ragtag',
@@ -12,7 +10,6 @@ vim.pack.add({
   'https://github.com/tpope/vim-repeat',
   'https://github.com/junegunn/fzf.vim',
   'https://github.com/dracula/vim',
-  'https://github.com/vimwiki/vimwiki',
   'https://github.com/junegunn/vim-easy-align',
   'https://github.com/psliwka/vim-smoothie',
   'https://github.com/PProvost/vim-ps1',
@@ -40,21 +37,12 @@ require('lualine').setup({ options = { theme = 'dracula' } })
 -- ============================================================================
 vim.g.mapleader = ','
 
--- NERDTree & netrw
-vim.g.NERDTreeNaturalSort = 1
-vim.g.NERDTreeMinimalUI = 1
+-- netrw
 vim.g.netrw_banner = 0
 
 -- FZF Layout & Options
 vim.g.fzf_layout = { window = { width = 0.8, height = 0.8 } }
 vim.env.FZF_DEFAULT_OPTS = '--reverse'
-
--- Vimwiki
-vim.g.vimwiki_list = {
-  { path = '$HOME/offsec/pwk/wiki/', path_html = '$HOME/offsec/pwk/wiki/html/', syntax = 'markdown', ext = '.md' },
-  { path = '$HOME/wiki/', path_html = '$HOME/wiki/html/', syntax = 'markdown', ext = '.md' },
-  { path = '$HOME/offsec/awae/wiki/', path_html = '$HOME/offsec/awae/wiki/html/', syntax = 'markdown', ext = '.md' },
-}
 
 -- Miscellaneous Globals
 vim.g.tex_flavor = 'latex'
