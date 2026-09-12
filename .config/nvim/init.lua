@@ -130,9 +130,8 @@ map({ 'n', 'v' }, '<C-right>', ':bnext<CR>', { silent = true })
 map('n', '<Leader>bd', ':bdelete %<CR>', { silent = true })
 map('n', '<Leader>bc', ':%bd|e#|bd#<CR>', { silent = true })
 
--- Quick Paste & Clipboard Operations
-map('n', '<Leader>p', '"0p')
-map('n', '<Leader>c', ':%y+<CR>', { silent = true })
+-- Paste to clipboard
+vim.opt.clipboard = "unnamedplus"
 
 -- Hex Editing
 map('n', '<Leader>h', ':%!xxd<CR>')
