@@ -120,6 +120,11 @@ map('n', '<Leader>bc', ':%bd|e#|bd#<CR>', { silent = true })
 
 -- Paste to clipboard
 vim.opt.clipboard = "unnamedplus"
+-- Direct 'c' and 'C' to the black hole register to preserve clipboard content
+vim.keymap.set("n", "c", '"_c', { noremap = true, silent = true })
+vim.keymap.set("n", "C", '"_C', { noremap = true, silent = true })
+-- Paste over visual selection without replacing the clipboard content
+vim.keymap.set("x", "p", 'P', { noremap = true, silent = true })
 
 -- Hex Editing
 map('n', '<Leader>h', ':%!xxd<CR>')
