@@ -64,6 +64,10 @@ set $ws10 "10"
 set $primary "HDMI-A-0"
 set $secondary "HDMI-A-1"
 
+# Pin workspaces to outputs
+workspace $ws1 output $primary
+workspace $ws2 output $secondary
+
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -77,10 +81,8 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 # Move focused container to workspace
-# bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+1 move container to output $primary
-# bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+2 move container to output $secondary
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
