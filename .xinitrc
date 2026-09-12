@@ -14,6 +14,7 @@ eval $(ssh-agent)
 xrandr --output DisplayPort-0 --mode 1920x1080 --rate 144
 
 # Launch applications on startup
+picom --daemon
 numlockx &
 unclutter &
 redshift &

@@ -152,6 +152,7 @@ bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
 bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
 
 # I3-gaps
+focus_on_window_activation none
 for_window [class="^.*"] border pixel 3
 gaps inner 10
 gaps outer 0
