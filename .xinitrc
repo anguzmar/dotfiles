@@ -20,6 +20,7 @@ unclutter &
 redshift &
 flameshot &
 dunst &
+nm-applet &
 xrandr --output HDMI-A-1 --auto --left-of HDMI-A-0 &
 xss-lock -- i3lock -e -t -i /home/angel/media/pictures/lambda.png &
 

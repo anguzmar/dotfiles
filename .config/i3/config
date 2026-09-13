@@ -66,7 +66,7 @@ set $secondary "HDMI-A-1"
 
 # Pin workspaces to outputs
 workspace $ws1 output $primary
-workspace $ws2 output $secondary
+workspace $ws10 output $secondary
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -130,12 +130,7 @@ bindsym $mod+p exec alacritty -e python
 bindsym Ctrl+space exec dunstctl close-all
 
 # Assign workspaces
-assign [class="code"] $ws3
-assign [class="VirtualBox Manager"] $ws10
-
-# Execute stuff
-exec --no-startup-id nm-applet
-exec --no-startup-id numlockx
+assign [class="firefox"] $ws10
 
 # Media keys
 bindsym XF86AudioPlay exec --no-startup-id mpc toggle
